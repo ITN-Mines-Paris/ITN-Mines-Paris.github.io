@@ -1,8 +1,8 @@
 import * as fs from "fs";
 
 const patch = {
-  base: "itn-web",
-  site: "https://boisgera.github.io",
+  base: "",
+  site: "https://itn-mines-paris.github.io",
 };
 
 const config = fs.readFileSync("astro.config.mjs", "utf8");
