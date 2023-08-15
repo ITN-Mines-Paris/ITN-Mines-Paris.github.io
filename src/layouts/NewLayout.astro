@@ -23,6 +23,14 @@ if (url.endsWith("/")) {
 
 let { title, description, heading, image, type } = Astro.props;
 
+const base = import.meta.env.BASE_URL;
+const path = Astro.url.pathname;
+
+// console.log("-----------------");
+// console.log("Base url:", import.meta.env.BASE_URL);
+// console.log("Astro.site:", Astro.site);
+// console.log("Astro:", Astro);
+
 title = title
   ? title + " | " + "ITN"
   : "Institut des Transformations Numériques";
@@ -31,10 +39,20 @@ description = description
   ? description
   : "Sciences et technologies du numérique à Mines Paris – PSL";
 
-image = image ? image : "opengraph.png";
-if (!image.startsWith("http")) {
-  image = new URL("/itn-web/" + image, Astro.site).toString();
+image = image ? image : "/opengraph.png";
+console.log("path:", Astro.url.pathname);
+if (!image.startsWith("http://") && !image.startsWith("https://")) {
+  // external resource
+  if (image.startsWith("/")) {
+    // absolute path
+    image = image.slice(1);
+    image = new URL(`${base}${image}`, Astro.site).toString();
+  } else {
+    // relative path
+    image = new URL(`${path}/${image}`, Astro.site).toString();
+  }
 }
+console.log("image:", `${image}`);
 
 type = type ? type : "website";
 ---
@@ -52,7 +70,7 @@ type = type ? type : "website";
       description={description}
       canonical={url}
       openGraph={{
-        basic: { title: heading ? heading : title, type, image },
+        basic: { title: heading ? heading : title, type, url, image },
         optional: { description },
       }}
       twitter={{
