@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 let { title, description, image, type = "article" } = frontmatter;
 ---
 
-<Layout heading={title} description={description} image={image} type={type}>
+<Layout title={title} description={description} image={image} type={type}>
   <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
     <slot />
   </div>

@@ -11,7 +11,7 @@ import Sectionhead from "@components/sectionhead.astro";
 interface Props {
   title?: string;
   description?: string;
-  heading?: string;
+  no_header?: boolean;
   image?: string;
   type?: "website" | "article";
 }
@@ -21,19 +21,17 @@ if (url.endsWith("/")) {
   url = url.slice(0, -1);
 }
 
-let { title, description, heading, image, type } = Astro.props;
+let { title, no_header = false, description, image, type } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
 const path = Astro.url.pathname;
 
-// console.log("-----------------");
-// console.log("Base url:", import.meta.env.BASE_URL);
-// console.log("Astro.site:", Astro.site);
-// console.log("Astro:", Astro);
-
-title = title
-  ? title + " | " + "ITN"
-  : "Institut des Transformations Numériques";
+const default_title = "Institut des Transformations Numériques";
+let heading = title ? title : default_title;
+title = heading;
+if (title != default_title) {
+  title = title + " | ITN";
+}
 
 description = description
   ? description
@@ -70,7 +68,7 @@ type = type ? type : "website";
       description={description}
       canonical={url}
       openGraph={{
-        basic: { title: heading ? heading : title, type, url, image },
+        basic: { title, type, url, image },
         optional: { description },
       }}
       twitter={{
@@ -86,7 +84,7 @@ type = type ? type : "website";
     <Navbar />
     <Container>
       {
-        heading ? (
+        !no_header ? (
           <Sectionhead>
             <Fragment slot="title">{heading}</Fragment>
             <Fragment slot="desc">{description}</Fragment>
