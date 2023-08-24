@@ -1,0 +1,99 @@
+---
+import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
+import Link from "@components/ui/card-link.astro";
+import { Icon } from "astro-icon";
+
+type TagType =
+  | "Photogrammétrie"
+  | "Modélisation 3D"
+  | "Interactions"
+  | "Accessibilité"
+  | "Réalité Augmentée"
+  | "Réalité Virtuelle"
+  | "Collaboration"
+  | "Programmation"
+  | "Innovation";
+
+interface Props {
+  title: string;
+  author: string;
+  description: string;
+  image: string;
+  url?: string;
+  tags?: TagType[];
+}
+
+let { title, author, description, image, url, tags } = Astro.props;
+
+tags = tags || [];
+
+const icons = {
+  Photogrammétrie: "stereo-glasses",
+  "Modélisation 3D": "frustum",
+  Interactions: "hand-finger",
+  Accessibilité: "accessible",
+  "Réalité Augmentée": "augmented-reality",
+  "Réalité Virtuelle": "badge-vr",
+  Collaboration: "users-group",
+  Programmation: "code",
+  Innovation: "bulb",
+};
+
+// import crossingTheLandscape from "assets/crossing-the-landscape.png";
+
+// const url =
+//     "https://projet-ingenierie.minesparis.psl.eu/portfolio/capture-volumetrique-et-danse-collaboration-avec-lartiste-celeste-rogosin/";
+---
+
+<div
+  class="flex overflow-hidden mb-[32px] rounded-md border-r-[#D8DEE9] border-opacity-50 border-2 md:h-[196px]">
+  <Image
+    src={image}
+    class="hidden md:inline-block rounded-l-md m-0"
+    alt="Crossing the Landscape"
+    width="196"
+    height="196"
+    loading="eager"
+    format="avif"
+  />
+  <div class="md:h-[196px] grow px-6 py-4">
+    <div class="flex gap-4">
+      <span class="font-semibold leading-6 text-md">{title}</span>
+      <span class="h-0 text-gray-600 leading-6">
+        {
+          tags.map((tag) => (
+            <span
+              class="transititext-primary text-primary transition duration-50 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+              data-te-toggle="tooltip"
+              title={tag}>
+              <Icon
+                class="hover:text-gray-900 inline-block w-4 h-4"
+                name={icons[tag]}
+              />
+            </span>
+          ))
+        }
+      </span>
+    </div>
+    <span class="text-slate-400 leading-4 mt-0 text-sm">{author}</span>
+
+    <p class="text-sm mt-[10px] mb-[10px]">
+      {description}
+    </p>
+
+    {
+      url ? (
+        <p class="mt-[10px] mb-0">
+          <a
+            href={url}
+            target="_blank"
+            class="font-normal no-underline text-sm bg-white">
+            En apprendre plus{" "}
+            <Icon class="inline-block w-4 h-4" name="arrow-right" />
+          </a>
+        </p>
+      ) : null
+    }
+  </div>
+</div>

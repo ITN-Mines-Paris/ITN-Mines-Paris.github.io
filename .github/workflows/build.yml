@@ -41,10 +41,10 @@ jobs:
           cd dist && touch .nojekyll
 
       - name: Deployment
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: "dist"
-          SINGLE_COMMIT: true
-          PRESERVE: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: "dist"
+          single-commit: true
+          clean: true

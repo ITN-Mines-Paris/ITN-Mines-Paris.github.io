@@ -81,9 +81,9 @@ des projets 2022.
 
 ### MOVIE 2023 -- Projets à venir
 
-Les étudiants de la session à venir choisirons un projet dans la liste suivante :
+Les étudiants de la session à venir choisiront un projet dans la liste suivante :
 
-import MovieProject from "@components/movie-project.astro";
+import MovieProject from "@components/new-movie-project.astro";
 
 import salleCortot from "assets/salle-cortot-nue.jpg";
 export const cortotDescription = `
@@ -97,25 +97,9 @@ export const cortotDescription = `
   author="Institut des Transformations Numériques"
   image={salleCortot}
   description={cortotDescription}
-  url="../salle-cortot"
-  tags="Interactions, Réalité virtuelle"
+  tags={["Interactions", "Réalité Virtuelle"]}
 />
 
-import crossingTheLandscape from "assets/crossing-the-landscape.png";
-export const danseDescription = ` 
-  Pour assister Céleste Rogosin dans son projet artistique, 
-  vous mettrez en place un système de capture 3D de performances de danse,
-  puis étudierez de nouveaux usages de modèles 2D ou 3D produits en fablab.`;
-
-<MovieProject
-  title="Par-delà les corps"
-  author="Céleste Rogosin"
-  tags="Photogrammétrie, Modélisation 3D"
-  image={crossingTheLandscape}
-  description={danseDescription}
-  url="../../movie/par-dela-les-corps"
-  tags="Photogrammétrie, Programmation, Modélisation 3D, Innovation"
-/>
 
 import wheelchair from "assets/wheelchair.jpg";
 export const accessibleDescription = `
@@ -127,7 +111,7 @@ par exemple en situation de handicap moteur ou cognitif.
 <MovieProject
   title="Une culture accessible"
   author="Château de Versailles"
-  tags="Interactions, Accessibilité"
+  tags={["Interactions", "Accessibilité"]}
   image={wheelchair}
   description={accessibleDescription}
 />
@@ -142,7 +126,7 @@ en les animant en réalité augmentée.
 <MovieProject
   title="Animer la pierre"
   author="Château de Versailles"
-  tags="Interactions, Modélisation 3D, Réalité augmentée"
+  tags={["Interactions", "Modélisation 3D", "Réalité Augmentée"]}
   image={buste}
   description={busteDescription}
 />
@@ -158,7 +142,7 @@ lorsqu'elle sont bâchées en hiver.
 <MovieProject
   title="Voir l'invisible"
   author="Château de Versailles"
-  tags="Interactions, Modélisation 3D, Réalité augmentée"
+  tags={["Interactions", "Modélisation 3D", "Réalité Augmentée"]}
   image={statue}
   description={sculptureDescription}
 />
@@ -172,7 +156,7 @@ château de Versailles sur un écran autostéréoscopique de grande taille.
 <MovieProject
   title="Maquettes holographiques"
   author="Château de Versailles"
-  tags="Interactions, Collaboration, Modélisation 3D, Photogrammétrie"
+  tags={["Interactions", "Collaboration", "Modélisation 3D", "Photogrammétrie"]}
   image={maquette}
   description={maquetteDescription}
 />
@@ -187,9 +171,113 @@ travers des interactions et activités de groupe.
 <MovieProject
   title="Ensemble au château de Versailles"
   author="Château de Versailles"
-  tags="Interactions, Collaboration, Réalité virtuelle"
+  tags={["Interactions", "Collaboration", "Réalité Virtuelle"]}
   image={foule}
   description={fouleDescription}
+/>
+
+import focus from "assets/focusboxinggirl.jpg";
+export const focusdescription = `
+Le focus d’attention désigne l’endroit vers lequel un individu
+dirige son attention. Ce focus peut être interne (mon corps) ou externe (mon environnement).
+ Vous mettrez en place une expérience de réalité virtuelle permettant d'influencer le focus d'attention d'un utilisateur
+  lors d'une tâche (écriture, mouvement sportif) et vous étudierez le rôle du focus sur la performance.
+`;
+
+<MovieProject
+  title="Focus d'attention"
+  author="Institut Supérieur de Réeducation Psychomotrice"
+  tags={["Interactions", "Programmation", "Réalité Virtuelle", "Accessibilité"]}
+  image={focus}
+  description={focusdescription}
+/>
+
+import alteredavatar from "assets/alteredavatar.jpg";
+export const alteredavatardescription = `
+Vous mettrez en place une application de réalité Virtuelle permettant de désynchroniser spatialement ou temporellement l'avatar de l'utilisateur immergé.
+Vous étudierez le rôle de la rotation entre l'avatar de la main de l'utilisateur et sa position physique lors d'une tâche de préhension.
+`;
+
+<MovieProject
+  title="Avatars altérés"
+  author="Institut Supérieur de Réeducation Psychomotrice"
+  tags={["Interactions", "Programmation", "Réalité Virtuelle", "Accessibilité"]}
+  image={alteredavatar}
+  description={alteredavatardescription}
+/>
+
+
+import crossingTheLandscape from "assets/crossing-the-landscape.png";
+export const danseDescription = ` 
+  Pour assister Céleste Rogosin dans son projet artistique, 
+  vous mettrez en place un système de capture 3D de performances de danse,
+  puis étudierez de nouveaux usages de modèles 2D ou 3D produits en fablab.`;
+
+<MovieProject
+  title="Par-delà les corps"
+  author="Céleste Rogosin"
+  tags="Photogrammétrie, Modélisation 3D"
+  image={crossingTheLandscape}
+  description={danseDescription}
+  url="../../movie/par-dela-les-corps"
+  tags={["Photogrammétrie", "Programmation", "Modélisation 3D", "Innovation"]}
+/>
+
+import draping from "assets/draping.jpg";
+export const drapingDescription = ` 
+  Pour assister Céline Shen dans son projet artistique, votre objectif est d'afficher des vêtements en réalité augmentée sur une personne en mouvement.
+  Vous intègrerez un système de motion capture et un moteur physique de simulation de tissus`;
+
+<MovieProject
+  title="Tissus dynamiques"
+  author="Céline Shen"
+  tags={["Modélisation 3D", "Programmation", "Réalité Augmentée"]}
+  image={draping}
+  description={drapingDescription}
+  url="https://celineshen.com/"
+/>
+
+import atlantisconcert from "assets/concert3D.jpg";
+export const concertDescription = ` 
+   Vous transformerez un concert de pop/rock/classique en version 3D visualisable
+    dans la plateforme Web3D New Atlantis. Une attention particulière sera donnée au son
+   afin d'aboutir à une expérience de concert complète.`;
+
+<MovieProject
+  title="Concert immersif"
+  author="New Atlantis"
+  tags={["Modélisation 3D", "Programmation", "Réalité Virtuelle"]}
+  image={atlantisconcert}
+  description={concertDescription}
+/>
+
+import atlantispatrimoine from "assets/patrimoine.png";
+export const patrimoineDescription = ` 
+   Vous travaillerez sur un lieu emblématique disparu de Paris pour le proposer à la découverte
+   dans la plateforme en ligne New Atlantis. Vous combinerez photogrammétrie et documents d'archives pour créer un modèle 3D.
+   `;
+
+<MovieProject
+  title="Patrimoine perdu"
+  author="New Atlantis"
+  tags={["Modélisation 3D", "Programmation", "Réalité Virtuelle"]}
+  image={atlantispatrimoine}
+  description={patrimoineDescription}
+/>
+
+import ardrill from "assets/ardrill.jpeg";
+export const ardrillDescription = ` 
+   Vous mettrez en place une interface en réalité augmentée permettant de visualiser les nombreux paramètres
+   d'un système de contrôle pour une application d'assistance au forage profond.
+   Votre objectif est la réduction de la charge cognitive des opérateurs en salle de contrôle
+   `;
+
+<MovieProject
+  title="Système de contrôle en RA"
+  author="Virgil Dynamics"
+  tags={["Modélisation 3D", "Programmation", "Réalité Augmentée"]}
+  image={ardrill}
+  description={ardrillDescription}
 />
 
 ### MOVIE 2022 -- Synthèse des projets
