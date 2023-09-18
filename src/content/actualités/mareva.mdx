@@ -6,29 +6,12 @@ image: "https://images.unsplash.com/photo-1623773458491-c6720dfb9377?ixlib=rb-4.
 date: "2023-09-10 12:00"
 category: "Enseignement"
 author: "Brigitte d'Andréa-Novel"
-tags: [apprentissage, robotique, vision, automatique]
+tags: [automatique, robotique, vision, apprentissage ]
 ---
 
-## 🚧 En construction 🚧
-
-  - Quid ES conseillés ??? : Apprentissage artificiel, Large­ Scale Machine Learning & Data Mining, Deep Learning for Image Analysis, Analyse d'images. TR «Données, Images, Modèle Physique et Apprentissage»,  «Théorie du Contrôle», «Informatique fondamentale»
-
-  - Re-branding A -> Apprentissage
-
-  - Tags pour 4 domaines d'activité et exploitation
-
-  - Refactoring long narratif
-
-  - Dates 2 dernières Semaines
-
-  - Info / S6, stage d'option ?
-
-
-
-----
-
 import { Image } from "@astrojs/image/components";
-import Topic from "components/mareva-topic.astro";
+import Topic from "components/mareva-topic-alt.astro";
+import ListItem from "components/mareva-list-item.astro";
 import robot from "assets/robot-crabe.jpg";
  
 
@@ -43,62 +26,64 @@ import robot from "assets/robot-crabe.jpg";
 
 ## Description
 
-L'option MAREVA du cycle ingénieur civil de Mines Paris – PSL intègre les 
-compétences de quatre domaines des Mathématiques appliquées :
+Les véhicules autonomes, les robots humanoïdes ou encore les systèmes 
+d'imagerie médicale font partie des projets technologiques innovants
+dont la conception nécessite des compétences variées en Mathématiques 
+appliquées. Pour préparer à de tels projets, 
+l'option MAREVA du cycle ingénieur civil de Mines Paris – PSL forme 
+ses étudiants aux quatre disciplines clés suivantes :
 
-  - Robotique, 
+<ul style="list-style-type: none;">
+  <ListItem name="Automatique"> Automatique, </ListItem>
+  <ListItem name="Robotique"> Robotique, </ListItem>
+  <ListItem name="Vision"> Vision artificielle, </ListItem>
+  <ListItem name="Apprentissage"> Apprentissage automatique. </ListItem>
+</ul>
 
-  - Automatique
+  - L'Automatique est la discipline qui étudie les systèmes dynamiques
+   (évoluant dans le temps),
+    afin de les modéliser, d'observer leur état interne et de les commander.
+    La nature de tels systèmes est très variée : mécanique, électrique,
+    biologique, etc. Guider une fusée pendant sont décollage, contrôler un
+    réacteur chimique pour maximiser sont rendement ou encore stabiliser 
+    l'altitude d'un avion sont des exemples de projets d'Automatique.
+  
+  - Un robot est schématiquement un système artificiel dotés de moyens de perception, 
+    de raisonnement et d'action qui lui permet d'interagir avec son environnement.  
+    Initialement développés pour le 
+    domaine manufacturier les robots sont désormais déployées dans les
+    exploitations agricoles, les centrales nucléaires, les projets d'exploration 
+    spatiale, de la route automatisée, etc.
 
-  - Vision et
-
-  - Apprentissage.
-
-En effet, pour développer des projets de plus en plus complexes, 
-par exemple dans des domaines multidisciplinaires tels que la robotique 
-chirurgicale ou la voiture autonome, 
-il est important de maîtriser des concepts de théorie du contrôle, 
-de filtrage, de vision, de robotique et d'apprentissage artificiel.
-
-L'Automatique est une science de l'ingénieur qui analyse les propriétés des 
-systèmes dynamiques en vue de leur observation et de leur commande. 
-La diversité apparente des systèmes dynamiques abordés 
-(systèmes différentiels linéaires ou non, systèmes récurrents, 
-systèmes à événements discrets, systèmes déterministes ou aléatoires), 
-la diversité de leur provenance (phénomènes mécaniques, électriques, hydrauliques, 
-aérodynamiques, physico-chimiques, biologiques, économiques …) 
-et la diversité des objectifs de commande (suivre des trajectoires de référence, travailler au moindre coût, rendre le système insensible à certaines perturbations et à des environnements mal connus …) expliquent l'étendue de la palette des outils mathématiques nécessaires à leur étude (algèbre, analyse, géométrie différentielle, topologie, probabilités, optimisation …). Face à cette réalité multiple, ce sont les concepts fondamentaux de modèle, relation entrées/sorties, commandabilité et observabilité, stabilité, robustesse … qui font l'unité de l'automatique.  
-Un système Robotique est un mécanisme doté de moyens de perception, 
-de raisonnement et d'action qui lui permettent d'interagir avec son environnement. La robotique s'est développée initialement dans le domaine manufacturier (bras manipulateurs destinés à des tâches de soudure, de peinture, de manutention, d'assemblage) où elle a permis un accroissement important de la productivité. Au-delà de l'activité manufacturière, la robotique a diffusé dans de nombreux autres domaines où l'environnement est moins bien connu, voire incertain ou même hostile. C'est le cas par exemple en robotique agricole, mais aussi dans les domaines du nucléaire, de la route automatisée, de la robotique spatiale et sous-marine, sans oublier la robotique humanoïde … La réalité virtuelle est également abordée et notamment dans un cadre de collaboration homme-machine.
-La Vision artificielle connaît aujourd'hui un grand essor. D'une part, 
+  - La Vision artificielle connaît aujourd'hui un grand essor.
+  D'une part, 
 nous assistons à l'apparition de systèmes d'acquisition de plus en plus 
 sophistiqués, produisant des images de résolution croissante, 
-des données hyper-spectrales et des nuages de points 3D non structurés entre autres. D'autre part, le succès de l'apprentissage profond a ouvert de nouvelles perspectives méthodologiques et applicatives. Ces méthodes sont combinées à des techniques dites "classiques", notamment la morphologie mathématique, offrant une meilleure interprétabilité, et qui restent nécessaires dans des situations où les données annotées sont rares. Les domaines d'application de la vision sont extrêmement larges : génomique, bio-médecine, contrôle industriel, matériaux, multimedia, robotique ... Des exemples issus de ces champs disciplinaires variés illustrent les concepts étudiés et permettent une bonne maîtrise des notions abordées en cours. 
-L'option MAREVA met ainsi à contribution l'essentiel des domaines scientifiques 
-des sciences de l'ingénieur : la mécanique et plus généralement la physique pour 
-la modélisation des systèmes étudiés, l'automatique pour la planification de 
-trajectoires et la commande en boucle ouverte ou fermée, 
-l'informatique au niveau du traitement des données capteurs 
-et des langages de programmation, 
-la vision par ordinateur et les techniques d'apprentissage pour interpréter la réalité.
+des données hyper-spectrales et des nuages de points 3D non structurés entre autres. 
+D'autre part, le succès de l'apprentissage profond a ouvert de nouvelles perspectives méthodologiques et applicatives. Ces méthodes sont combinées à des techniques dites "classiques", notamment la morphologie mathématique, offrant une meilleure interprétabilité, et qui restent nécessaires dans des situations où les données annotées sont rares. Les domaines d'application de la vision sont extrêmement larges : génomique, bio-médecine, contrôle industriel, matériaux, multimedia, robotique ... Des exemples issus de ces champs disciplinaires variés illustrent les concepts étudiés et permettent une bonne maîtrise des notions abordées en cours. 
 
-Les cours MAREVA ont pour objectif d'approfondir les domaines suivants :
-
-  - la théorie du contrôle (Automatique linéaire et non linéaire des systèmes continus et à événements discrets, filtrage),
-
-  - la Robotique (capteurs, réalité virtuelle, modélisation, commande des robots manipulateurs et à roues, notions de robotique chirurgicale), 
-  
-  - la Vision (techniques de filtrage et segmentation, imagerie médicale, analyse de scènes urbaines, réseaux convolutifs pour l'analyse d'image et les nuages de points 3D).
+  - L'Apprentissage automatique permet de définir le comportement de systèmes 
+    informatiques en fonction de données qu'ont leur fournit et d'objectifs à
+    atteindre, et sans que ceux-ci ait été explicitement programmés. 
+    En utilisant des algorithmes et des modèles mathématiques, 
+    l'apprentissage automatique permet aux machines de reconnaître des schéma 
+    complexes, de faire des prédictions et de prendre des décisions autonomes. 
+    Ses applications sont vastes et diverses, allant de la recommandation de 
+    produits sur les plateformes de commerce en ligne à la détection de fraudes 
+    financières, en passant par la reconnaissance vocale et faciale, 
+    la conduite autonome, la prédiction de la demande, l'optimisation logistique, 
+    et bien d'autres domaines.
+    L'apprentissage automatique révolutionne la manière dont nous utilisons la 
+    technologie et continue de jouer un rôle central dans notre société moderne.
 
 ## Programme 2023
 
-**TODO:** remplacer liste par un narratif (avec liens).
-
-  - [Enseignements](#enseignements-mareva--semaines-1-à-3)
-  - [Interlude](#interlude)
-  - [Visites](#visites-mareva--semaine-4)
-  - [Projets](#projets-mareva--semaines-5-et-6)
-
+Le programme de formation MAREVA 2023 exploite sur 6 semaines. 
+Les trois premières semaines sont des consacrées à 
+des [enseignements](#enseignements-mareva--semaines-1-à-3),
+d'un [interlude](#interlude) de quelques mois, 
+puis d'une semaine de [visites](#visites-mareva--semaine-4)
+et de deux semaines de [projets](#projets-mareva--semaines-5-et-6). 
 
 ### Enseignements MAREVA -- Semaines 1 à 3
 
@@ -208,33 +193,40 @@ doivent apporter une solution à un problème original tiré des problématiques
 de recherche actuelles. 
 Pour ceci, ils doivent réaliser une étude préalable de l'existant, imaginer, 
 développer les meilleures stratégies dans un temps limité et les présenter à l'oral. 
-Cette expérience recherche constitue une préparation pour les travaux d'option a
+Cette expérience recherche constitue une préparation pour les travaux d'option
 du semestre 6.
 
 #### Semaines du **??** et **??** janvier 2024
 
-| Jour                    | Activité                                                          |                                     
-| :---------------------- | :---------------------------------------------------------------- | 
-| Lundi                   | Examen Imagerie Médicale                                          |   
-|                         | Examen Automatique                                                |   
-|                         | Examen Systèmes à temps discret                                   |   
-| Du mardi ??? au ven ??? | Projets MAREVA                                                    |
-| Du lundi ??? au ven ??? | Projets MAREVA                                                     |
+| Jour                    | Domaines | Activité                                                          |                                     
+| :---------------------- | :------- | :---------------------------------------------------------------- | 
+| Lundi                   | <Topic name="Vision" /> | Examen Imagerie Médicale                                          |   
+|                         | <Topic name="Automatique" /> | Examen Automatique                                                |   
+|                         | <Topic name="Automatique" /> | Examen Systèmes à temps discret                                   |   
+| Du mardi ??? au ven ??? | <Topic name="Automatique" /> <Topic name="Robotique" /> <Topic name="Vision" /> <Topic name="Apprentissage" /> | Projets MAREVA                                                    |
+| Du lundi ??? au ven ??? | <Topic name="Automatique" /> <Topic name="Robotique" /> <Topic name="Vision" /> <Topic name="Apprentissage" /> | Projets MAREVA                                                     |
 
 
 
 
 ## Travaux d'option 2023
 
-| Entreprise           | Sujet                                                              |
-| :------------------- | :----------------------------------------------------------------- |
-| Owkin France         | Causalité et invariance pour l'identification de cibles            |
-| Exotec               | Algorithmes de gestion de la circulation d'une flotte de robots    |
-| Eco-Adapt            | Maintenance prédictive de l'état d'usure d'un roulement            |
-| Dassault             | Traduction automatique par Deep Learning                           |
-| Datakalab            | Compression de réseaux de neurones                                 |
-| Engie                | Détection et reconnaissance d'objets à partir de documents visuels |
-| JOKO                 | Automatisation de la navigation dans le navigateur web Joko        |
-| CNRS-LAMSADE         | Modèles d'attention et apprentissage par renforcement              |
-| Spinergie            | Apprentissage d'activité de bateaux à partir de leur trajectoire   |
-| RTE                  | Modèles génératifs pour des scénarios de production photovoltaïque et éolien   |
+Les étudiants choisiront un stage d'option parmi ceux proposés par 
+les entreprises et laboratoires partenaires de MAREVA.
+Les travaux d'option se dérouleront du ??? au ???.
+
+A ce jour, les sujets proprosés sont les suivants :
+
+| Entreprise           |  | Sujet                                                               |
+| :------------------- | :------- | :----------------------------------------------------------------- |
+| Owkin                | <Topic name="Apprentissage" />  | Causalité et invariance pour l'identification de cibles            |
+| Exotec               | <Topic name="Robotique" /> | Algorithmes de gestion de la circulation d'une flotte de robots    |
+| Eco-Adapt            | <Topic name="Apprentissage" />  | Maintenance prédictive de l'état d'usure d'un roulement            |
+| Dassault             | <Topic name="Apprentissage" /> | Traduction automatique par Deep Learning                           |
+| Datakalab            | <Topic name="Apprentissage" /> | Compression de réseaux de neurones                                 |
+| Engie                | <Topic name="Vision" /> | Détection et reconnaissance d'objets à partir de documents visuels |
+| JOKO                 | <Topic name="Automatique" /> | Automatisation de la navigation dans le navigateur web Joko        |
+| LAMSADE              | <Topic name="Apprentissage" /> | Modèles d'attention et apprentissage par renforcement              |
+| Spinergie            | <Topic name="Apprentissage" /> | Apprentissage d'activité de bateaux à partir de leur trajectoire   |
+| RTE                  | <Topic name="Apprentissage" /> | Modèles génératifs pour des scénarios de production photovoltaïque et éolien   |
+
