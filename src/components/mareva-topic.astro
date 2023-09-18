@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon";
+
+const icons = {
+  Robotique: "robot",
+  Automatique: "settings-automation",
+  Vision: "eye",
+  Apprentissage: "brain",
+};
+
+const { name } = Astro.props;
+---
+
+<span
+  class="transititext-primary text-primary transition duration-50 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+  data-te-toggle="tooltip"
+  title={name}>
+  <span
+    class="bg-black top-1 mt-0 h-6 w-6 rounded-full inline-flex items-center justify-center">
+    <Icon
+      name={icons[name]}
+      class="text-white inline-block w-4 h-4"
+    />
+  </span>
+</span>

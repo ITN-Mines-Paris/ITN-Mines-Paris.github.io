@@ -9,11 +9,28 @@ author: "Brigitte d'Andréa-Novel"
 tags: [apprentissage, robotique, vision, automatique]
 ---
 
-## 🚧 Travaux en cours 🚧
+## 🚧 En construction 🚧
 
+  - Quid ES conseillés ??? : Apprentissage artificiel, Large­ Scale Machine Learning & Data Mining, Deep Learning for Image Analysis, Analyse d'images. TR «Données, Images, Modèle Physique et Apprentissage»,  «Théorie du Contrôle», «Informatique fondamentale»
+
+  - Re-branding A -> Apprentissage
+
+  - Tags pour 4 domaines d'activité et exploitation
+
+  - Refactoring long narratif
+
+  - Dates 2 dernières Semaines
+
+  - Info / S6, stage d'option ?
+
+
+
+----
 
 import { Image } from "@astrojs/image/components";
+import Topic from "components/mareva-topic.astro";
 import robot from "assets/robot-crabe.jpg";
+ 
 
 <Image
   src={robot}
@@ -26,13 +43,16 @@ import robot from "assets/robot-crabe.jpg";
 
 ## Description
 
-L'option MAREVA intègre les compétences de trois domaines des Mathématiques Appliquées :  
+L'option MAREVA du cycle ingénieur civil de Mines Paris – PSL intègre les 
+compétences de quatre domaines des Mathématiques appliquées :
 
-  - la RobotiquE, 
-  
-  - la Vision et 
-  
-  - l'Automatique. 
+  - Robotique, 
+
+  - Automatique
+
+  - Vision et
+
+  - Apprentissage.
 
 En effet, pour développer des projets de plus en plus complexes, 
 par exemple dans des domaines multidisciplinaires tels que la robotique 
@@ -40,14 +60,29 @@ chirurgicale ou la voiture autonome,
 il est important de maîtriser des concepts de théorie du contrôle, 
 de filtrage, de vision, de robotique et d'apprentissage artificiel.
 
-L'Automatique est une science de l'ingénieur qui analyse les propriétés des systèmes dynamiques en vue de leur observation et de leur commande. La diversité apparente des systèmes dynamiques abordés (systèmes différentiels linéaires ou non, systèmes récurrents, systèmes à événements discrets, systèmes déterministes ou aléatoires), la diversité de leur provenance (phénomènes mécaniques, électriques, hydrauliques, aérodynamiques, physico-chimiques, biologiques, économiques …) et la diversité des objectifs de commande (suivre des trajectoires de référence, travailler au moindre coût, rendre le système insensible à certaines perturbations et à des environnements mal connus …) expliquent l'étendue de la palette des outils mathématiques nécessaires à leur étude (algèbre, analyse, géométrie différentielle, topologie, probabilités, optimisation …). Face à cette réalité multiple, ce sont les concepts fondamentaux de modèle, relation entrées/sorties, commandabilité et observabilité, stabilité, robustesse … qui font l'unité de l'automatique.  
-Un système Robotique est un mécanisme doté de moyens de perception, de raisonnement et d'action qui lui permettent d'interagir avec son environnement. La robotique s'est développée initialement dans le domaine manufacturier (bras manipulateurs destinés à des tâches de soudure, de peinture, de manutention, d'assemblage) où elle a permis un accroissement important de la productivité. Au-delà de l'activité manufacturière, la robotique a diffusé dans de nombreux autres domaines où l'environnement est moins bien connu, voire incertain ou même hostile. C'est le cas par exemple en robotique agricole, mais aussi dans les domaines du nucléaire, de la route automatisée, de la robotique spatiale et sous-marine, sans oublier la robotique humanoïde … La réalité virtuelle est également abordée et notamment dans un cadre de collaboration homme-machine.
-La Vision artificielle connaît aujourd'hui un grand essor. D'une part, nous assistons à l'apparition de systèmes d'acquisition de plus en plus sophistiqués, produisant des images de résolution croissante, des données hyper-spectrales et des nuages de points 3D non structurés entre autres. D'autre part, le succès de l'apprentissage profond a ouvert de nouvelles perspectives méthodologiques et applicatives. Ces méthodes sont combinées à des techniques dites "classiques", notamment la morphologie mathématique, offrant une meilleure interprétabilité, et qui restent nécessaires dans des situations où les données annotées sont rares. Les domaines d'application de la vision sont extrêmement larges : génomique, bio-médecine, contrôle industriel, matériaux, multimedia, robotique ... Des exemples issus de ces champs disciplinaires variés illustrent les concepts étudiés et permettent une bonne maîtrise des notions abordées en cours. 
-L'option MAREVA met ainsi à contribution l'essentiel des domaines scientifiques des sciences de l'ingénieur : la mécanique et plus généralement la physique pour la modélisation des systèmes étudiés, l'automatique pour la planification de trajectoires et la commande en boucle ouverte ou fermée, l'informatique au niveau du traitement des données capteurs et des langages de programmation, la vision par ordinateur et les techniques d'apprentissage pour interpréter la réalité.
+L'Automatique est une science de l'ingénieur qui analyse les propriétés des 
+systèmes dynamiques en vue de leur observation et de leur commande. 
+La diversité apparente des systèmes dynamiques abordés 
+(systèmes différentiels linéaires ou non, systèmes récurrents, 
+systèmes à événements discrets, systèmes déterministes ou aléatoires), 
+la diversité de leur provenance (phénomènes mécaniques, électriques, hydrauliques, 
+aérodynamiques, physico-chimiques, biologiques, économiques …) 
+et la diversité des objectifs de commande (suivre des trajectoires de référence, travailler au moindre coût, rendre le système insensible à certaines perturbations et à des environnements mal connus …) expliquent l'étendue de la palette des outils mathématiques nécessaires à leur étude (algèbre, analyse, géométrie différentielle, topologie, probabilités, optimisation …). Face à cette réalité multiple, ce sont les concepts fondamentaux de modèle, relation entrées/sorties, commandabilité et observabilité, stabilité, robustesse … qui font l'unité de l'automatique.  
+Un système Robotique est un mécanisme doté de moyens de perception, 
+de raisonnement et d'action qui lui permettent d'interagir avec son environnement. La robotique s'est développée initialement dans le domaine manufacturier (bras manipulateurs destinés à des tâches de soudure, de peinture, de manutention, d'assemblage) où elle a permis un accroissement important de la productivité. Au-delà de l'activité manufacturière, la robotique a diffusé dans de nombreux autres domaines où l'environnement est moins bien connu, voire incertain ou même hostile. C'est le cas par exemple en robotique agricole, mais aussi dans les domaines du nucléaire, de la route automatisée, de la robotique spatiale et sous-marine, sans oublier la robotique humanoïde … La réalité virtuelle est également abordée et notamment dans un cadre de collaboration homme-machine.
+La Vision artificielle connaît aujourd'hui un grand essor. D'une part, 
+nous assistons à l'apparition de systèmes d'acquisition de plus en plus 
+sophistiqués, produisant des images de résolution croissante, 
+des données hyper-spectrales et des nuages de points 3D non structurés entre autres. D'autre part, le succès de l'apprentissage profond a ouvert de nouvelles perspectives méthodologiques et applicatives. Ces méthodes sont combinées à des techniques dites "classiques", notamment la morphologie mathématique, offrant une meilleure interprétabilité, et qui restent nécessaires dans des situations où les données annotées sont rares. Les domaines d'application de la vision sont extrêmement larges : génomique, bio-médecine, contrôle industriel, matériaux, multimedia, robotique ... Des exemples issus de ces champs disciplinaires variés illustrent les concepts étudiés et permettent une bonne maîtrise des notions abordées en cours. 
+L'option MAREVA met ainsi à contribution l'essentiel des domaines scientifiques 
+des sciences de l'ingénieur : la mécanique et plus généralement la physique pour 
+la modélisation des systèmes étudiés, l'automatique pour la planification de 
+trajectoires et la commande en boucle ouverte ou fermée, 
+l'informatique au niveau du traitement des données capteurs 
+et des langages de programmation, 
+la vision par ordinateur et les techniques d'apprentissage pour interpréter la réalité.
 
-## Programme
-
-Les cours MAREVA ont pour objectif d'approfondir les domaines suivants :
+Les cours MAREVA ont pour objectif d'approfondir les domaines suivants :
 
   - la théorie du contrôle (Automatique linéaire et non linéaire des systèmes continus et à événements discrets, filtrage),
 
@@ -55,14 +90,141 @@ Les cours MAREVA ont pour objectif d'approfondir les domaines suivants :
   
   - la Vision (techniques de filtrage et segmentation, imagerie médicale, analyse de scènes urbaines, réseaux convolutifs pour l'analyse d'image et les nuages de points 3D).
 
-Un moment fort de la période d'option est la réalisation de mini-projets. Pendant une dizaine de jours, les étudiants en binômes, encadrés par des E/C de l'école ou des collaborateurs extérieurs, doivent apporter une solution à un problème original tiré des problématiques de recherche actuelles.  Pour ceci, ils doivent réaliser une étude préalable de l'existant, imaginer, développer les meilleures stratégies dans un temps limité et les présenter à l'oral. Il s'agit d'une expérience recherche qui constitue un bon entrainement pour le travail d'option au S6.
-Finalement une semaine de visites d'entreprises et de laboratoires en France ou en Europe en lien avec les domaines de l'option. Les visites permettent de découvrir les mises en situation réelle ainsi que les enjeux scientifiques et techniques, sociétaux et environnementaux du domaine de l'option MAREVA.
-ES conseillés : Apprentissage artificiel, Large­ Scale Machine Learning & Data Mining, Deep Learning for Image Analysis, Analyse d'images. TR «Données, Images, Modèle Physique et Apprentissage»,  «Théorie du Contrôle», «Informatique fondamentale»
+## Programme 2023
 
-## Exemples de travaux d'option 2023
+**TODO:** remplacer liste par un narratif (avec liens).
+
+  - [Enseignements](#enseignements-mareva--semaines-1-à-3)
+  - [Interlude](#interlude)
+  - [Visites](#visites-mareva--semaine-4)
+  - [Projets](#projets-mareva--semaines-5-et-6)
+
+
+### Enseignements MAREVA -- Semaines 1 à 3
+
+![Enseignements MAREVA](https://unsplash.com/photos/5fNmWej4tAA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTEwfHx0ZWFjaGluZyUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjk0Njg3MTU2fDA&force=true&w=1920)
+
+#### Du 26 septembre 2023 au 30 septembre 2023
+
+| Jour                | Sujet                                        | Domaines                | Intervenant             |
+| :------------------ | :------------------------------------------- | :---------------------- | :---------------------- |
+| Lundi               | Accueil Mines Paris                          |                         |                  |
+| Mardi               | Accueil Option MAREVA                        | | Brigitte d'Andrea-Novel |
+|                     | Automatique linéaire                         | <Topic name="Automatique" /> | Sébastien Boisgérault   |
+| Mercredi            | Imagerie médicale: [GE Healthcare][GE] (Buc) | <Topic name="Vision" /> | Beatriz Marcotegui      | 
+|                     | Imagerie médicale: [GE Healthcare][GE] (Buc) | <Topic name="Vision" /> | Beatriz Marcotegui      | 
+| Jeudi               | Réseaux de neurones                          | <Topic name="Apprentissage" />  | Bruno Figliuzzi         |
+|                     | Réseaux de neurones                          | <Topic name="Apprentissage" />  | Bruno Figliuzzi         |
+| Vendredi            | Imagerie médicale                            | <Topic name="Vision" />  | Jean-Marie Rocchisani   |
+|                     | Capteurs                                     | <Topic name="Robotique" /> <Topic name="Vision" /> | François Goulette       |
+
+[GE]: https://www.gehealthcare.fr/about/ge-healthcare-offices-in-france
+
+
+#### Du 2 octobre 2023 au 6 octobre 2023
+
+
+| Jour                | Sujet                                            | Domaines | Intervenant             |
+| :------------------ | :----------------------------------------------- | :------- | :---------------------- |
+| Lundi               | Imagerie 3D                                      | <Topic name="Robotique" /> <Topic name="Vision" /> | François Goulette       |
+|                     | Modélisation 3D                                  | <Topic name="Robotique" /> | Jean-Pierre Richa       |
+| Mardi               | Robotique chirurgicale                           | <Topic name="Robotique" /> | François Goulette       |
+|                     | Commande linéaire                                | <Topic name="Automatique" /> | Sébastien Boisgérault   |
+| Mercredi            | Observateurs linéaires                           | <Topic name="Automatique" /> | Silvère Bonnabel        |
+|                     | Commande non-linéaire                            | <Topic name="Automatique" /> | Brigitte d'Andrea-Novel | 
+| Jeudi               | Commande de robots manipulateurs                 | <Topic name="Automatique" /> <Topic name="Robotique" /> | Brigitte d'Andrea-Novel |
+|                     | Observateurs non-linéaires                       | <Topic name="Automatique" /> | Pauline Bernard         |
+| Vendredi            | Commande de robots mobiles                       | <Topic name="Automatique" /> <Topic name="Robotique" /> | Brigitte d’Andrea-Novel |
+|                     | Robotique humanoïde                              | <Topic name="Robotique" /> | Justin Carpentier       |
+
+#### Du 9 octobre 2023 au 12 octobre 2023
+
+| Jour                | Sujet                                                         | Domaines | Intervenant             |
+| :------------------ | :------------------------------------------------------------ | :------- | :---------------------- |
+| Lundi               | Systèmes à évènements discrets 1/6                            | <Topic name="Automatique" /> | Stéphane Gaubert        |
+|                     | Présentation stages 2A                                        | |                         |
+| Mardi               | Systèmes à évènements discrets 2/6                            | <Topic name="Automatique" /> | Stéphane Gaubert        |
+|                     | Présentation stages 2A                                        | |                       |
+| Mercredi            | Modèles génératifs                                            | <Topic name="Apprentissage" />| Santiago Velasco        |
+|                     | Segmentation sémantique avec U-Net                            | <Topic name="Vision" /> <Topic name="Apprentissage" />| Beatriz Marcotegui      |
+| Jeudi               | Analyse de nuage de points 3D                                 | <Topic name="Vision" /> | Beatriz Marcotegui      |
+|                     | Imagerie médicale                                             | <Topic name="Vision" /> | Beatriz Marcotegui                  |
+| Vendredi            | Apprentissage par renforcement en Robotique                   | <Topic name="Robotique" /> <Topic name="Apprentissage" /> | Stéphane Caron          |
+|                     | Visites MAREVA (préparation)                                 |                         |
+
+## Interlude 
+
+![Interlude](https://unsplash.com/photos/SaGYQxHQN0w/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTAyfHxhdXR1bW4lMjB0ZWF8ZW58MHx8fHwxNjk0NzgyMzczfDA&force=true&w=768)
+
+Trois lundis sur la période novembre & décembre sont consacrés à l'option :
+
+| Jour                          | Sujet                               | Domaines | Intervenant             |
+| :---------------------------- | :---------------------------------- | :------- | :---------------------- |
+| Lundi 6 nov. 2023 matin       | Systèmes à évènements discrets 4/6  | <Topic name="Automatique" /> | Stéphane Gaubert        |
+| Lundi 13 nov. 2023 matin      | Recherche de stages                 |                         |
+| Lundi 13 nov. 2023 après-midi | Systèmes à évènements discrets 5/6  | <Topic name="Automatique" /> | Stéphane Gaubert        |
+| Lundi 18 déc. 2023 matin      | Recherche de stages                 |                         |
+| Lundi 18 déc. 2023 après-midi | Systèmes à évènements discrets 6/6  | <Topic name="Automatique" /> | Stéphane Gaubert        |
+
+
+### Visites MAREVA -- Semaine 4
+
+<img src="https://unsplash.com/photos/F62KYnSlZHE/download?w=768" width="768px"
+style="object-fit:cover;height:576px;"/>
+
+La semaine 4 est consacrée à des visites d'entreprises et de laboratoires 
+exercant leur activité dans les domaines de l'option. 
+Elles permettent d'y découvrir des mises en situation réelles, ainsi que 
+les enjeux scientifiques et techniques, sociétaux et environnementaux 
+associés à l'option.
+
+#### Du 16 au 20 octobre 2023
+
+| Jour                | Activité                       | Lieu                 |                   
+| :------------------ | :----------------------------- | :------------------- |
+| Lundi               | Visite [VirtUs]                | Rennes               |
+|                     | Visite [InterDigital]          | Rennes               | 
+| Mardi               | Visite [Check&Visit]           | Rennes               |
+|                     | Visite [Siradel]               | Rennes               |
+| Mercredi            | Forum Trium                    | Paris                |
+| Jeudi               | Controverses                   | Paris                |
+| Vendredi            | Visite [Wandercraft]           | Paris                |
+|                     | MAREVA : retours d'expérience  | Paris                |
+
+[VirtUs]: https://team.inria.fr/virtus/
+[InterDigital]: https://www.interdigital.com/
+[Check&Visit]: https://www.checkandvisit.com/
+[Siradel]: https://www.siradel.com/
+[Wandercraft]: https://www.wandercraft.eu/
+
+### Projets MAREVA -- Semaines 5 et 6
+
+![Projets MAREVA](https://unsplash.com/photos/SYTO3xs06fU/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjk0Njg3MTI2fA&force=true&w=1920)
+
+Un moment fort de la période d'option est la réalisation de projets. 
+Pendant une dizaine de jours, les étudiants en binômes, encadrés par des 
+enseignants-chercheurs de l'école ou des collaborateurs extérieurs, 
+doivent apporter une solution à un problème original tiré des problématiques 
+de recherche actuelles. 
+Pour ceci, ils doivent réaliser une étude préalable de l'existant, imaginer, 
+développer les meilleures stratégies dans un temps limité et les présenter à l'oral. 
+Cette expérience recherche constitue une préparation pour les travaux d'option a
+du semestre 6.
+
+#### Semaines du **??** et **??** janvier 2024
+
+| Jour                    | Activité                                                          |                                     
+| :---------------------- | :---------------------------------------------------------------- | 
+| Lundi                   | Examen Imagerie Médicale                                          |   
+|                         | Examen Automatique                                                |   
+|                         | Examen Systèmes à temps discret                                   |   
+| Du mardi ??? au ven ??? | Projets MAREVA                                                    |
+| Du lundi ??? au ven ??? | Projets MAREVA                                                     |
 
 
 
+
+## Travaux d'option 2023
 
 | Entreprise           | Sujet                                                              |
 | :------------------- | :----------------------------------------------------------------- |
@@ -75,4 +237,4 @@ ES conseillés : Apprentissage artificiel, Large­ Scale Machine Learning & Data
 | JOKO                 | Automatisation de la navigation dans le navigateur web Joko        |
 | CNRS-LAMSADE         | Modèles d'attention et apprentissage par renforcement              |
 | Spinergie            | Apprentissage d'activité de bateaux à partir de leur trajectoire   |
-| RTE                  | Modèles génératifs pour des scénarios de production PV et éolien   |
+| RTE                  | Modèles génératifs pour des scénarios de production photovoltaïque et éolien   |

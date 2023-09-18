@@ -25,6 +25,7 @@ import oculus from "assets/oculus.jpg";
   width="768"
   loading="eager"
   format="avif"
+  class=""
 />
 
 L’ingénieur doit être préparé aux challenges économiques, stratégiques,
@@ -41,9 +42,7 @@ Pour construire cette culture théorique et pratique, le module d’ingénierie
 MOVIE – pour Mondes Virtuels Technologies Enjeux et Société – intègre
 
 - des cours théoriques,
-
 - un cycle de conférences,
-
 - des projets d'ingénierie.
 
 Le cours ont notamment pour sujet la réalité virtuelle et la synthèse d’image temps réel.
@@ -98,6 +97,7 @@ export const cortotDescription = `
   image={salleCortot}
   description={cortotDescription}
   tags={["Interactions", "Réalité Virtuelle"]}
+  url="../../movie/interfacecreation"
 />
 
 
@@ -114,6 +114,7 @@ par exemple en situation de handicap moteur ou cognitif.
   tags={["Interactions", "Accessibilité"]}
   image={wheelchair}
   description={accessibleDescription}
+  url="../../movie/accessibilite"
 />
 
 import buste from "assets/bustes-versailles.jpg";
@@ -129,6 +130,7 @@ en les animant en réalité augmentée.
   tags={["Interactions", "Modélisation 3D", "Réalité Augmentée"]}
   image={buste}
   description={busteDescription}
+  url="../../movie/animerlapierre"
 />
 
 import statue from "assets/statue-versailles.jpg";
@@ -145,6 +147,7 @@ lorsqu'elle sont bâchées en hiver.
   tags={["Interactions", "Modélisation 3D", "Réalité Augmentée"]}
   image={statue}
   description={sculptureDescription}
+  url="../../movie/voirlinvisible"
 />
 
 import maquette from "assets/versailles.jpg";
@@ -159,6 +162,7 @@ château de Versailles sur un écran autostéréoscopique de grande taille.
   tags={["Interactions", "Collaboration", "Modélisation 3D", "Photogrammétrie"]}
   image={maquette}
   description={maquetteDescription}
+  url="../../movie/maquettesholographiques"
 />
 
 import foule from "assets/versailles-foule.jpg";
@@ -174,14 +178,13 @@ travers des interactions et activités de groupe.
   tags={["Interactions", "Collaboration", "Réalité Virtuelle"]}
   image={foule}
   description={fouleDescription}
+  url="../../movie/ensembleauchateau"
 />
 
 import focus from "assets/focusboxinggirl.jpg";
 export const focusdescription = `
-Le focus d’attention désigne l’endroit vers lequel un individu
-dirige son attention. Ce focus peut être interne (mon corps) ou externe (mon environnement).
- Vous mettrez en place une expérience de réalité virtuelle permettant d'influencer le focus d'attention d'un utilisateur
-  lors d'une tâche (écriture, mouvement sportif) et vous étudierez le rôle du focus sur la performance.
+ Vous mettrez en place une expérience de réalité virtuelle permettant d'influencer le focus d'attention (mon corps, mon environnement)
+  lors d'une tâche (écriture, mouvement sportif).
 `;
 
 <MovieProject
@@ -190,12 +193,20 @@ dirige son attention. Ce focus peut être interne (mon corps) ou externe (mon en
   tags={["Interactions", "Programmation", "Réalité Virtuelle", "Accessibilité"]}
   image={focus}
   description={focusdescription}
+  url="../../movie/focus"
 />
 
 import alteredavatar from "assets/alteredavatar.jpg";
 export const alteredavatardescription = `
-Vous mettrez en place une application de réalité Virtuelle permettant de désynchroniser spatialement ou temporellement l'avatar de l'utilisateur immergé.
-Vous étudierez le rôle de la rotation entre l'avatar de la main de l'utilisateur et sa position physique lors d'une tâche de préhension.
+Vous mettrez en place une application de réalité virtuelle permettant de 
+désynchroniser spatialement ou temporellement l'avatar de l'utilisateur immergé.
+Vous étudierez le rôle de la rotation entre l'avatar de la main de l'utilisateur
+et sa position physique lors d'une tâche de préhension.
+`;
+export const alteredavatardescription2 = `
+Vous développerez une application de réalité virtuelle qui peut
+désynchroniser spatialement ou temporellement l'utilisateur de son l'avatar.
+Puis, vous étudierez le rôle de ce décalage lors d'une tâche de préhension.
 `;
 
 <MovieProject
@@ -203,7 +214,8 @@ Vous étudierez le rôle de la rotation entre l'avatar de la main de l'utilisate
   author="Institut Supérieur de Réeducation Psychomotrice"
   tags={["Interactions", "Programmation", "Réalité Virtuelle", "Accessibilité"]}
   image={alteredavatar}
-  description={alteredavatardescription}
+  description={alteredavatardescription2}
+  url="../../movie/avataraltere"
 />
 
 
@@ -227,14 +239,33 @@ import draping from "assets/draping.jpg";
 export const drapingDescription = ` 
   Pour assister Céline Shen dans son projet artistique, votre objectif est d'afficher des vêtements en réalité augmentée sur une personne en mouvement.
   Vous intègrerez un système de motion capture et un moteur physique de simulation de tissus`;
+export const drapingDescription2 = ` 
+  Pour assister Céline Shen dans son projet artistique, vous afficherez des 
+  vêtements en réalité augmentée sur une personne en mouvement.
+  Vous intègrerez un système de motion capture et un moteur physique de simulation de tissus.`;
+
 
 <MovieProject
   title="Tissus dynamiques"
   author="Céline Shen"
   tags={["Modélisation 3D", "Programmation", "Réalité Augmentée"]}
   image={draping}
-  description={drapingDescription}
+  description={drapingDescription2}
   url="https://celineshen.com/"
+/>
+
+import archi from "assets/archi.png";
+export const archiDescription = ` 
+En combinant photogrammétrie et modélisation 3D vous créerez un modèle 3D visuellement réaliste de l'école des Mines.
+Vous inventerez des interactions multisensorielles pour une visite inédite de l'école en VR.`;
+
+<MovieProject
+  title="Visite multimodale des Mines Paris"
+  author="Mines Paris"
+  tags={["Modélisation 3D", "Photogrammétrie", "Programmation", "Réalité Virtuelle"]}
+  image={archi}
+  description={archiDescription}
+  url="../../movie/archi"
 />
 
 import atlantisconcert from "assets/concert3D.jpg";
@@ -249,6 +280,7 @@ export const concertDescription = `
   tags={["Modélisation 3D", "Programmation", "Réalité Virtuelle"]}
   image={atlantisconcert}
   description={concertDescription}
+  url="../../movie/concertimmersif"
 />
 
 import atlantispatrimoine from "assets/patrimoine.png";
@@ -263,6 +295,7 @@ export const patrimoineDescription = `
   tags={["Modélisation 3D", "Programmation", "Réalité Virtuelle"]}
   image={atlantispatrimoine}
   description={patrimoineDescription}
+  url="../../movie/patrimoineperdu"
 />
 
 import ardrill from "assets/ardrill.jpeg";
@@ -271,13 +304,21 @@ export const ardrillDescription = `
    d'un système de contrôle pour une application d'assistance au forage profond.
    Votre objectif est la réduction de la charge cognitive des opérateurs en salle de contrôle
    `;
+export const ardrillDescription2 = ` 
+   Vous mettrez en place une interface en réalité augmentée pour visualiser 
+   les nombreux paramètres de contrôle d'une application 
+   d'assistance au forage profond, dans l'objectif de
+   réduire la charge cognitive de ses opérateurs.
+   `;
+
 
 <MovieProject
   title="Système de contrôle en RA"
   author="Virgil Dynamics"
   tags={["Modélisation 3D", "Programmation", "Réalité Augmentée"]}
   image={ardrill}
-  description={ardrillDescription}
+  description={ardrillDescription2}
+  url="https://virgil-dynamics-arc-system.super.site"
 />
 
 ### MOVIE 2022 -- Synthèse des projets
