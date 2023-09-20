@@ -1,3 +1,9 @@
+# Node
+package-lock.json
+
+# PNPM
+pnpm-lock.yaml
+
 # VS Code
 .vscode/
 
