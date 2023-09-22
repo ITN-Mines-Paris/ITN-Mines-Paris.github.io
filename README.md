@@ -2,19 +2,33 @@
 
 A web site built with [Astro](https://astro.build/) & [Astroship](https://astro.build/themes/details/astroship/).
 
+This repository is the antechamber of https://itn.dev/ ; the actual site is hosted at https://github.com/ITN-Mines-Paris/ITN-Mines-Paris.github.io
+which is synchronized manually with this repository.
+
 ## Live Demo
 
 [![https://boisgera.github.io/itn-web/](https://boisgera.github.io/itn-web/ITN-preview.png)](https://boisgera.github.io/itn-web/)
 
-## Pagespeed 
-
-[![https://boisgera.github.io/itn-web/ITN-pagespeed.png](https://boisgera.github.io/itn-web/ITN-pagespeed.png)](https://pagespeed.web.dev/report?url=https://boisgera.github.io/itn-web/)
-
 ## Installation
 
-You can clone the project directly from this repo to your local system.
+You can work on the project in the cloud (preferred method) or locally 
+(if you know what you're doing).
 
-### 1. Clone the repo
+### 0. Prerequisites
+
+To work in the cloud, you need a [GitHub account](https://github.com/) 
+to get (a 60-hour a month free) access to [GitHub Codespaces](https://github.com/features/codespaces).
+
+To work locally, you need to install:
+
+  - [Git](https://git-scm.com/),
+
+  - [Node.js](https://nodejs.org/en/) ; 
+    we suggest that you use the latest LTS version,
+
+### 1. Clone the repository
+
+In the cloud, [create a new Codespace](https://codespaces.new/boisgera/itn-web). Alternatively, to work locally, clone the repo:
 
 ```bash
 git clone git@github.com:boisgera/itn-web.git
@@ -22,46 +36,37 @@ git clone git@github.com:boisgera/itn-web.git
 
 ### 2. Install Dependencies
 
+Codespace should automatically install your dependencies. If you work locally, type:
+
 ```bash
 npm install
-# or
-yarn install
-# or (recommended)
-pnpm install
 ```
 
-### 3. Start development Server
+
+### 3. Start a Web Server
+
+The command
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or (recommended)
-pnpm dev
 ```
 
-### Preview & Build
+starts a Web development server. In Codespaces it will also prompt you to open a browser window (locally, you are on your own). In both cases, each time you save a file, the browser will reload the site so that you can immediately see the effect of your changes.
 
-```bash
-npm run preview
-npm run build
-# or
-yarn preview
-yarn build
-# or (recommended)
-pnpm preview
-pnpm build
-```
+You are now ready to start working on the project.
 
-We recommend using [pnpm](https://pnpm.io/) to save disk space on your computer.
+### 4. Development cycle
 
-### Other Commands
+  - Synchronize: download the most recent version of the project files   
+    (`git pull` locally), 
 
-```bash
-pnpm astro ...
-pnpm astro add
-pnpm astro --help
-```
+  - Edit the files, then commit your changes  
+    (`git add` + `git commit` locally),
+  
+  - Synchronize: upload these changes to the project repository   
+    (`git push` locally).
+
+
 
 ## Project Structure
 
@@ -72,6 +77,8 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── public/
 │   └── ...
 ├── src/
+│   ├── assets/
+│   │   └── ...
 │   ├── components/
 │   │   └── ...
 │   ├── layouts/
@@ -81,10 +88,9 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro looks for `.astro`,`.md` or `.mdx` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Static assets can be placed in the `public/` directory. Images placed in 
+the `assets/directory` are optimized and served as static assets.
 
-## TailwindCSS
-
-TailwindCSS is already configured in this repo, so you can start using it without any installation.
+Refer to [Astro documentation](https://docs.astro.build/getting-started) for more information.
