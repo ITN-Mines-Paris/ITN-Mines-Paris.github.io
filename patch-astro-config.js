@@ -2,7 +2,7 @@ import * as fs from "fs";
 
 const patch = {
   base: "",
-  site: "https://itn-mines-paris.github.io",
+  site: "https://itn.dev",
 };
 
 const config = fs.readFileSync("astro.config.mjs", "utf8");
