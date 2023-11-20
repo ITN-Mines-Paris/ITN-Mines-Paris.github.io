@@ -1,0 +1,309 @@
+---
+import Layout from "@layouts/NewLayout.astro";
+import Portrait from "@components/portrait.astro";
+
+const data = [
+  {
+    "name": "Brigitte d'Andréa-Novel",
+    "role": "Professeure, Directrice de l'ITN",
+    "email": "brigitte.dandrea-novel@minesparis.psl.eu",
+    "linkedin": "brigitte-d-andréa-novel-81a18527a",
+    "skills": {
+      "Ingénierie Numérique": ["Automatique", "Robotique", "Véhicules autonomes"],
+      "Industries Créatives": ["Musique"],
+    }
+  },
+  {
+    "name": "Chloé-Agathe Azencott",
+    "role": "Enseignante-chercheuse",
+    "email": "chloe-agathe.azencott@minesparis.psl.eu",
+    "url": "https://cazencott.info/",
+    "skills": {
+      "Ingénierie Numérique": ["Apprentissage automatique", "Science des données"],
+      "Santé Numérique": ["Bioinformatique", "Recherche thérapeutique"],
+      "Autres": ["Inclusivité"]
+    }
+  },
+  {
+    "name": "Sébastien Boisgérault",
+    "role": "",
+    "email": "",
+    "linkedin": "",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+
+  {
+    "name": "Philippe Blanc",
+    "role": "",
+    "email": "",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Industries Créatives": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Myriam Cailloux",
+    "role": "Responsable administrative ITN",
+    "email": "",
+    "linkedin": "",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Jérôme Crépin",
+    "role": "",
+    "email": "",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Industries Créatives": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Cédric Dalmasso",
+    "role": "Enseignant-chercheur, Directeur de centre",
+    "email": "cedric.dalmasso@minesparis.psl.eu",
+    "linkedin": "cédric-dalmasso-38447a43",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Santé Numérique": ["Santé au travail"],
+      "Autres": ["Sciences de Gestion", "Transformation numérique"]
+    }
+  },
+  {
+    "name": "Etienne Decencière Ferrandière",
+    "role": "",
+    "email": "",
+    "linkedin": "",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Jean-Emmanuel Deschaud",
+    "role": "Enseignant-chercheur, Responsable d'équipe",
+    "email": "jean-emmanuel.deschaud@minesparis.psl.eu",
+    "linkedin": "jeanemmanueldeschaud",
+    "skills": {
+      "Ingénierie Numérique": ["Apprentissage automatique", 
+      "Véhicules autonomes", "Modélisation 3D"],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Nicolas Desassis",
+    "role": "Enseignant-chercheur, Responsable d'équipe",
+    "email": "nicolas.desassis@minesparis.psl.eu",
+    "linkedin": "nicolas-desassis-956b0810",
+    "skills": {
+      "Ingénierie Numérique": [
+      "Analyse inverse", "Géostatistique", "Logiciel scientifique", "Simulation de fonctions aléatoires" 
+      ],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Robin Girard",
+    "role": "",
+    "email": "",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Industries Créatives": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Elie Hachem",
+    "role": "Professeur, Directeur de centre",
+    "email": "elie.hachem@minesparis.psl.eu",
+    "linkedin": "ehachem",
+    "skills": {
+      "Ingénierie Numérique": ["Apprentissage par renforcement", "Apprentissage informé par la physique", "Calcul haute performance", "Mécanique des fluides"],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Vincent Lagneau",
+    "role": "Enseignant-chercheur, Directeur de centre",
+    "email": "vincent.lagneau@minesparis.psl.eu",
+    "linkedin": "vincent-lagneau-12284a95",
+    "skills": {
+      "Ingénierie Numérique": ["Analyse numérique", "Logiciel scientifique"],
+      "Santé Numérique": [],
+      "Autres": ["Géosciences"]
+    }
+  },
+  {
+    "name": "Béatriz Marcotegui",
+    "role": "",
+    "email": "",
+    "linkedin": "",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Alexis Paljic",
+    "role": "Enseignant-chercheur, Responsable d'équipe",
+    "email": "alexis.paljic@minesparis.psl.eu",
+    "url": "https://www.caor.minesparis.psl.eu/presentation/virtual-reality-and-augmented-reality",
+    "skills": {
+      "Ingénierie Numérique": ["Réalité virtuelle/augmentée", "Interactions homme-machine"],
+      "Santé Numérique": [],
+      "Industries Créatives": ["Mondes virtuels", "Media & Création"],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Philippe Kalousdian",
+    "role": "Cofondateur ISLEAN, Président Mines Paris Alumni ",
+    "email": "philippe.kalousdian@islean-consulting.com",
+    "linkedin": "kalousdian",
+    "skills": {
+      "Ingénierie Numérique": ["Systèmes d'information"],
+      "Autres": ["Transformation numérique", "Stratégie digitale", "Startups"]
+    }
+  },
+  {
+    "name": "Sotiris Manitsaris",
+    "role": "Enseignant-chercheur, Responsable d'équipe",
+    "email": "sotiris.manitsaris@minesparis.psl.eu",
+    "linkedin": "sotirismanitsaris",
+    "skills": {
+      "Ingénierie Numérique": ["Apprentissage automatique", "Interactions homme-machine"],
+      "Santé Numérique": [],
+      "Industries Créatives": ["Mouvement & Corps"],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Sébastien Perrin",
+    "role": "Directeur de la Bibliothèque",
+    "email": "sebastien.perrin@minesparis.psl.eu",
+    "linkedin": "sebastien-perrin-48892157",
+    "skills": {
+      "Ingénierie Numérique": ["Logiciel scientifique", "Données de la recherche", "Systèmes d'information"],
+      "Industries Créatives": ["Patrimoine"],
+      "Santé Numérique": [],
+      "Autres": ["Science ouverte"]
+    }
+  },
+  {
+    "name": "Cédric Prunier",
+    "role": "Directeur du développement, partenariats, entrepreneuriat et valorisation",
+    "email": "cedric.prunier@minesparis.psl.eu",
+    "linkedin": "cedricprunier",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Industries Créatives": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Thierry Ranchin",
+    "role": "",
+    "email": "",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Industries Créatives": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Valérie Roy",
+    "role": "Enseignante-chercheuse", //"Maîtresse de Recherche",
+    "email": "valerie.roy@minesparis.psl.eu",
+    "skills": {
+      "Ingénierie Numérique": ["Informatique", "Science des données"],
+      "Santé Numérique": ["Données médicales"],
+      "Autres": ["Formation"]
+    }
+  },
+  {
+    "name": "David Ryckelynck",
+    "role": "Professeur, Responsable d'équipe",
+    "email": "david.ryckelynck@mines-paristech.fr",
+    "linkedin": "david-ryckelynck-36511092",
+    "skills": {
+      "Ingénierie Numérique": ["Apprentissage de variétés", "Modélisation mécanique à base de graphes", "Mécanique des matériaux"],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Georges-André Silber",
+    "role": "Enseignant-chercheur",
+    "email": "georges-andre.silber@minesparis.psl.eu",
+    "linkedin": "georges-andré-silber-ba51862a",
+    "skills": {
+      "Ingénierie Numérique": ["Compilation & Métaprogrammation", "Systèmes distribués & Parallélisme", "Langages dédiés"],
+      "Industries Créatives": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Véronique Stoven",
+    "role": "Professeure",
+    "email": "veronique.stoven@minesparis.psl.eu",
+    "url": "https://curie.fr/personne/veronique-stoven",
+    "skills": {
+      "Ingénierie Numérique": ["Apprentissage automatique"],
+      "Santé Numérique": ["Bioinformatique", "Biologie structurale", "Recherche thérapeutique"],
+    }
+  },
+  {
+    "name": "Yannick Tillier",
+    "role": "Professeur, Responsable d'équipe",
+    "email": "yannick.tillier@minesparis.psl.eu",
+    "linkedin": "yannick-tillier-4b00101b",
+    "skills": {
+      "Ingénierie Numérique": ["Analyse inverse", "Elements finis", "Mécanique des matériaux"],
+      "Industries Créatives": [],
+      "Santé Numérique": ["Biomécanique", "Biomatériaux"],
+      "Autres": []
+    }
+  },
+  {
+    "name": "Yannick Vimont",
+    "role": "Directeur de la Recherche",
+    "email": "yannick.vimont@minesparis.psl.eu",
+    "linkedin": "yannick-vimont-04565b10b",
+    "skills": {
+      "Ingénierie Numérique": [],
+      "Industries Créatives": [],
+      "Santé Numérique": [],
+      "Autres": []
+    }
+  },
+]
+
+---
+
+<Layout
+  title="Equipe"
+  description="Découvrez les acteurs de l'ITN">
+  <div class="max-w-3xl my-12 m-auto flex flex-col gap-12">
+    {data.map((datum) => <Portrait attrs={datum} />)}
+  </div>
+</Layout>
