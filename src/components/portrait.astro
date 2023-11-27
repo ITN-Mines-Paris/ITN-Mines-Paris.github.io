@@ -3,10 +3,11 @@ import Tag from "@components/named-tag.astro"
 import { Icon } from "astro-icon";
 
 const { attrs } = Astro.props;
-const { name, role, email, url, linkedin, skills } = attrs;
+const { name, role, email, url, linkedin, github, skills } = attrs;
 const emailHref = `mailto:${email}?cc=itn@minesparis.psl.eu&subject=[ITN]`;
 const image = `${import.meta.env.BASE_URL}portraits/${name}.webp`;
 const linkedinHref = linkedin && `https://www.linkedin.com/in/${linkedin}/`;
+const githubHref = github && `https://github.com/${github}`;
 
 const map = {
   "à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a",
@@ -65,6 +66,14 @@ const id = noAccent(name).replace(/\W/g, "-")
             <Icon
               class="w-4 h-4 inline relative"
               name="tabler:brand-linkedin"
+            />
+          </span>
+        </a>}
+        { githubHref && <a href={githubHref}>
+          <span class="hover:text-blue-600 transition-colors">
+            <Icon
+              class="w-4 h-4 inline relative"
+              name="tabler:brand-github"
             />
           </span>
         </a>}
