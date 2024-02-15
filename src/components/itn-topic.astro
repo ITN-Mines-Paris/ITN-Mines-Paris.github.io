@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon";
+
+const icons = {
+  "Ingénierie Numérique": {
+    name: "abacus",
+    iconColor: "sky-600",
+    backgroundColor: "sky-100",
+  },
+  "Industries Culturelles et Créatives": {
+    name: "tabler:palette",
+    iconColor: "purple-600",
+    backgroundColor: "purple-100",
+  },
+  "Santé Numérique": {
+    name: "tabler:vaccine",
+    iconColor: "red-600",
+    backgroundColor: "red-100",
+  },
+};
+
+const { name } = Astro.props;
+const icon = icons[name];
+
+`bg-sky-100 text-sky-600 
+bg-purple-100 text-purple-600
+bg-red-100 bg-red-600`;
+---
+
+<span
+  style="position:relative"
+  class="transititext-primary text-primary transition duration-50 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+  data-te-toggle="tooltip"
+  title={name}>
+  <span style="position: relative; top:0.0625em;">
+    <span
+      class={`bg-${icon.backgroundColor} top-1 mt-0 w-5 h-5 rounded inline-flex items-center justify-center`}>
+      <Icon
+        name={icon.name}
+        class={`text-${icon.iconColor} inline-block w-4 h-4`}
+      />
+    </span>
+  </span>
+</span>

@@ -1,0 +1,13 @@
+---
+import Topic from "/src/components/itn-topic.astro";
+
+const { name } = Astro.props;
+---
+
+<li class="relative">
+  <span style="margin-right:0.25em;"> 
+    <Topic name={name} />
+  </span>
+  <slot />
+</li>
+
