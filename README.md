@@ -1,6 +1,6 @@
 # Institut des Transformations numériques
 
-[itn.dev](https://itn.dev), a web site built with [Astro](https://astro.build/).
+The source code of [itn.dev](https://itn.dev), a web site built with [Astro](https://astro.build/).
 
 [![https://itn.dev](https://itn.dev/ITN-preview.png)](https://itn.dev)
 
@@ -86,3 +86,25 @@ Static assets can be placed in the `public/` directory. Images placed in
 the `assets/directory` are optimized and served as static assets.
 
 Refer to [Astro documentation](https://docs.astro.build/getting-started) for more information.
+
+
+
+## Administration
+
+
+### Domain Name
+
+  - Registrar: [OVH](https://www.ovhcloud.com/)
+
+  - Admin: @boisgera
+
+  - Status: ⚠️ Renew before 01/09/2024
+
+
+### Mail Service
+
+Used in the [Contact Form](https://itn.dev/contact/).
+
+  - Admin: @Brigittedan
+
+  - Status: 😵 Expired?
