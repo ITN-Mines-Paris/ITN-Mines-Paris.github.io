@@ -93,8 +93,6 @@ Refer to [Astro documentation](https://docs.astro.build/getting-started) for mor
 
 ### Hosting
 
-GitHub ✅
-
   - 🏢 Provider: [GitHub](https://github.com)
 
   - 💶 Account: managed by the [ITN-Mines-Paris organisation](https://github.com/orgs/ITN-Mines-Paris); owners: [@boisgera](https://github.com/boisgera) / [@Brigittedan](https://github.com/Brigittedan) / [@gasilber](https://github.com/gasilber)
