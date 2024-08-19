@@ -2,12 +2,9 @@
 
 A web site built with [Astro](https://astro.build/) & [Astroship](https://astro.build/themes/details/astroship/).
 
-This repository is the antechamber of https://itn.dev/ ; the actual site is hosted at https://github.com/ITN-Mines-Paris/ITN-Mines-Paris.github.io
-which is synchronized manually with this repository.
+## Live Web Site
 
-## Live Demo
-
-[![https://boisgera.github.io/itn-web/](https://boisgera.github.io/itn-web/ITN-preview.png)](https://boisgera.github.io/itn-web/)
+[![https://itn.dev](https://itn.dev/ITN-preview.png)](https://itn.dev)
 
 ## Installation
 
@@ -41,7 +38,6 @@ Codespace should automatically install your dependencies. If you work locally, t
 ```bash
 npm install
 ```
-
 
 ### 3. Start a Web Server
 
