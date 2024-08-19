@@ -91,20 +91,37 @@ Refer to [Astro documentation](https://docs.astro.build/getting-started) for mor
 
 ## Administration
 
+### Hosting
+
+GitHub ✅
+
+  - 🏢 Provider: [GitHub](https://github.com)
+
+  - 💶 Account: managed by the [ITN-Mines-Paris organisation](https://github.com/orgs/ITN-Mines-Paris); owners: [@boisgera](https://github.com/boisgera) / [@Brigittedan](https://github.com/Brigittedan) / [@gasilber](https://github.com/gasilber)
+  
+  - 🪛 Integration: [@boisgera](https://github.com/boisgera)
+
+  - 🔋 Status: ⚠️ ✅
 
 ### Domain Name
 
-  - Registrar: [OVH](https://www.ovhcloud.com/)
+  - 🏢 Provider: [OVH](https://www.ovhcloud.com/)
 
-  - Admin: @boisgera
+  - 💶 Account: [@boisgera](https://github.com/boisgera)
+  
+  - 🪛 Integration: [@boisgera](https://github.com/boisgera)
 
-  - Status: ⚠️ Renew before 01/09/2024
+  - 🔋 Status: ⚠️ Renew before 01/09/2024
 
 
 ### Mail Service
 
 Used in the [Contact Form](https://itn.dev/contact/).
 
-  - Admin: @Brigittedan
+  - 🏢 Provider: [Web3Forms](https://web3forms.com/)
 
-  - Status: 😵 Expired?
+  - 💶 Account: [@Brigittedan](https://github.com/Brigittedan)  
+    
+  - 🪛 Integration [@boisgera](https://github.com/boisgera) 
+
+  - 🔋 Status: 😵 Expired?
