@@ -99,7 +99,7 @@ Refer to [Astro documentation](https://docs.astro.build/getting-started) for mor
   
   - 🪛 Integration: [@boisgera](https://github.com/boisgera)
 
-  - 🔋 Status: ⚠️ ✅
+  - 🔋 Status: ✅
 
 ### Domain Name
 
