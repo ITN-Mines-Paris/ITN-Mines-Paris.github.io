@@ -1,8 +1,6 @@
 # Institut des Transformations numériques
 
-A web site built with [Astro](https://astro.build/) & [Astroship](https://astro.build/themes/details/astroship/).
-
-## Live Web Site
+[itn.dev](https://itn.dev), a web site built with [Astro](https://astro.build/).
 
 [![https://itn.dev](https://itn.dev/ITN-preview.png)](https://itn.dev)
 
@@ -25,10 +23,10 @@ To work locally, you need to install:
 
 ### 1. Clone the repository
 
-In the cloud, [create a new Codespace](https://codespaces.new/boisgera/itn-web). Alternatively, to work locally, clone the repo:
+In the cloud, [create a new Codespace](https://codespaces.new/ITN-Mines-Paris/ITN-Mines-Paris.github.io). Alternatively, to work locally, clone the repo:
 
 ```bash
-git clone git@github.com:boisgera/itn-web.git
+git clone git@github.com:ITN-Mines-Paris/ITN-Mines-Paris.github.io.git
 ```
 
 ### 2. Install Dependencies
@@ -61,8 +59,6 @@ You are now ready to start working on the project.
   
   - Synchronize: upload these changes to the project repository   
     (`git push` locally).
-
-
 
 ## Project Structure
 
