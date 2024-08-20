@@ -93,13 +93,13 @@ Refer to [Astro documentation](https://docs.astro.build/getting-started) for mor
 
 ### Hosting
 
-  - 🏢 Provider: [GitHub](https://github.com)
+  - 🏢 Provider: [GitHub](https://github.com) (GitHub pages)
 
   - 💶 Account: [@boisgera](https://github.com/boisgera), [@Brigittedan](https://github.com/Brigittedan), [@gasilber](https://github.com/gasilber), owners of the  [ITN-Mines-Paris GitHub organisation](https://github.com/orgs/ITN-Mines-Paris)
   
   - 🪛 Integration: [@boisgera](https://github.com/boisgera)
 
-  - 🔋 Status: ✅
+  - 🔋 Status: ✅ Free
 
 ### Domain Name
 
@@ -109,7 +109,7 @@ Refer to [Astro documentation](https://docs.astro.build/getting-started) for mor
   
   - 🪛 Integration: [@boisgera](https://github.com/boisgera)
 
-  - 🔋 Status: ⚠️ Renew before 01/09/2024
+  - 🔋 Status: ✅ Renew before 01/09/2029
 
 
 ### Mail Service
