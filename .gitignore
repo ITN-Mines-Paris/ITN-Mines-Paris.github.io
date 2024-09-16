@@ -5,7 +5,8 @@ package-lock.json
 pnpm-lock.yaml
 
 # VS Code
-.vscode/
+.vscode/*
+!.vscode/launch.json
 
 # build output
 dist/
