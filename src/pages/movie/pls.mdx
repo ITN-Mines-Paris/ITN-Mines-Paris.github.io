@@ -1,0 +1,29 @@
+---
+title: Capture volumetrique
+description: Mines Paris
+layout: ../../layouts/MDLayout.astro
+---
+
+Vous mettrez en place une application VR permettant d'apprendre au grand public la procédure de mise en sécurité d'une personne vistime d'un malaise sur la voie publique.
+
+import { Image } from "@astrojs/image/components";
+
+import imagepls from "assets/movie/assistancepsl.jpg";
+
+<div class="flex justify-center">
+  <div class="flex items-center">
+    <Image
+      src={imagepls}
+      class="inline-block rounded-full"
+      alt="Assistance"
+      width="64"
+      height="64"
+      loading="eager"
+      format="avif"
+    />
+    <div class="inline-block ml-4">
+      <span>Application d'apprentissage de l'assistance aux victimes en VR</span>
+      <br />
+    </div>
+  </div>
+</div>
