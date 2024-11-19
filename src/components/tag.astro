@@ -1,10 +1,41 @@
 ---
 import { Icon } from "astro-icon";
 
+type Props = {
+    color?: "slate" | "sky" | "purple" | "red";
+    icon?: string;
+    tag: string;
+};
 const { color = "slate", icon = "circle-filled", tag } = Astro.props;
-const background = `bg-${color}-50`;
-const spanClass = `relative top-[1px] h-6 w-6 rounded-full inline-flex items-center justify-center bg-${color}-50`;
-const iconClass = `inline-block w-4 h-4 text-${color}-600`;
+
+// j'ai rajouté cette "map" pour que Tailwind puisse "tree shaker" les classes inutilisées
+const classesByColor = {
+    slate: {
+        background: "bg-slate-50",
+        span: "bg-slate-50",
+        icon: "text-slate-600",
+    },
+    sky: {
+        background: "bg-sky-50",
+        span: "bg-sky-50",
+        icon: "text-sky-600",
+    },
+    purple: {
+        background: "bg-purple-50",
+        span: "bg-purple-50",
+        icon: "text-purple-600",
+    },
+    red: {
+        background: "bg-red-50",
+        span: "bg-red-50",
+        icon: "text-red-600",
+    },
+}
+
+const colors = classesByColor[color];
+const background = colors.background;
+const spanClass = `relative top-[1px] h-6 w-6 rounded-full inline-flex items-center justify-center ${colors.span}`;
+const iconClass = `inline-block w-4 h-4 ${colors.icon}`;
 
 // Tailwind tree shaker
 ("bg-sky-200 bg-purple-200 bg-red-200");

@@ -1,8 +1,8 @@
 ---
 import Layout from "@layouts/NewLayout.astro";
-import Card from "@components/card.astro";
+import Card, { type CardInfo } from "@components/card.astro";
 
-const cards = [
+const cards: CardInfo[] = [
   {
     name: "Equipe de Direction",
     popular: false,

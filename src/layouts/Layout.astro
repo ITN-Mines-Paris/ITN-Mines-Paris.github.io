@@ -6,8 +6,9 @@ import "@fontsource-variable/inter/index.css";
 
 export interface Props {
   title: string;
-  description: string;
+  description?: string;
 }
+const { title, description } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
@@ -16,7 +17,6 @@ const resolvedImageWithDomain = new URL(
   Astro.site
 ).toString();
 
-const { title, description } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "ITN"

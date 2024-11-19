@@ -1,12 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
-import { Picture } from "@astrojs/image/components";
-import Link from "@components/ui/card-link.astro";
 import { Icon } from "astro-icon";
 
-let { title, author, description, image, url, tags } = Astro.props;
-
-tags = tags.split(",").map((tag) => tag.trim());
 
 const icons = {
   Photogrammétrie: "stereo-glasses",
@@ -20,10 +15,18 @@ const icons = {
   Innovation: "bulb",
 };
 
-// import crossingTheLandscape from "assets/crossing-the-landscape.png";
+type Props = {
+  title: string;
+  author: string;
+  description: string;
+  image: ImageMetadata;
+  url: string;
+  tags: string | string[];
+};
+const { title, author, description, image, url, tags: tagListOrString } = Astro.props;
 
-// const url =
-//     "https://projet-ingenierie.minesparis.psl.eu/portfolio/capture-volumetrique-et-danse-collaboration-avec-lartiste-celeste-rogosin/";
+const tagList = Array.isArray(tagListOrString) ? tagListOrString : tagListOrString.split(",");
+const tags = tagList.map((tag) => tag.trim());
 ---
 
 <div
@@ -32,8 +35,8 @@ const icons = {
     src={image}
     class="hidden md:inline-block rounded-l-md m-0"
     alt="Crossing the Landscape"
-    width="196"
-    height="196"
+    width={196}
+    height={196}
     loading="eager"
     format="avif"
   />

@@ -1,13 +1,24 @@
 ---
+const sizes = {
+  lg: "px-5 py-2.5",
+  md: "px-4 py-2",
+  sm: "px-3 py-1.5",
+};
+const styles = {
+  outline: "bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900",
+  primary: "bg-black text-white hover:bg-gray-800  border-2 border-transparent",
+  inverted: "bg-white text-black   border-2 border-transparent",
+  muted: "bg-gray-100 hover:bg-gray-200   border-2 border-transparent",
+};
+
 interface Props {
   href: string;
-  size?: "sm" | "md" | "lg";
+  size?: keyof typeof sizes;
   block?: boolean;
-  style?: "outline" | "primary" | "inverted" | "muted";
+  style?: keyof typeof styles;
   class?: string;
   [x: string]: any;
 }
-
 const {
   href,
   block,
@@ -16,19 +27,6 @@ const {
   class: className,
   ...rest
 } = Astro.props;
-
-const sizes = {
-  lg: "px-5 py-2.5",
-  md: "px-4 py-2",
-  sm: "px-3 py-1.5",
-};
-
-const styles = {
-  outline: "bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900",
-  primary: "bg-black text-white hover:bg-gray-800  border-2 border-transparent",
-  inverted: "bg-white text-black   border-2 border-transparent",
-  muted: "bg-gray-100 hover:bg-gray-200   border-2 border-transparent",
-};
 ---
 
 <a

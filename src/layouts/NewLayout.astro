@@ -2,7 +2,6 @@
 import { SEO } from "astro-seo";
 
 import Container from "@components/container.astro";
-import SectionHead from "@components/sectionhead.astro";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
@@ -11,17 +10,17 @@ import Sectionhead from "@components/sectionhead.astro";
 interface Props {
   title?: string;
   description?: string;
+  heading?: string;
   no_header?: boolean;
   image?: string;
   type?: "website" | "article";
 }
+let { title, no_header = false, description, image, type } = Astro.props;
 
 let url = Astro.url.href;
 if (url.endsWith("/")) {
   url = url.slice(0, -1);
 }
-
-let { title, no_header = false, description, image, type } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
 const path = Astro.url.pathname;

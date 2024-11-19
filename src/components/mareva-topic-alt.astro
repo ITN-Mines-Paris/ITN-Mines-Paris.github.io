@@ -23,17 +23,14 @@ const icons = {
     background: "purple-200",
   },
 };
+export type MarevaTopicType = keyof typeof icons;
 
+type Props = {
+  name: MarevaTopicType
+};
 const { name } = Astro.props;
-const icon = icons[name];
 
-`bg-slate-800 text-slate-200 
-bg-orange-200 text-orange-500 
-bg-slate-200 text-slate-800 
-text-green-200
-bg-purple-200 text-purple-500
-bg-rose-200 text-rose-500
-bg-blue-200 text-blue-500`;
+const icon = icons[name];
 ---
 
 <span

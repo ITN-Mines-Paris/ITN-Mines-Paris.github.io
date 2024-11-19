@@ -1,13 +1,17 @@
 ---
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import ITNLogo from "@components/itn-logo.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import { Icon } from "astro-icon";
 import Social from "@components/social.astro";
 
-const menuitems = [
+type MenuItem = {
+  title: string;
+  path: string;
+  children?: MenuItem[];
+};
+
+const menuitems: MenuItem[] = [
   // {
   //   title: "Features",
   //   path: "#",

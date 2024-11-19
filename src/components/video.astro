@@ -1,5 +1,13 @@
 ---
+import { JSX } from 'astro/jsx-runtime';
+
+type Props = {
+    id: string;
+    width?: JSX.IntrinsicElements['iframe']['width']
+    height?: JSX.IntrinsicElements['iframe']['height'];
+};
 const { id, width = "320", height = "180" } = Astro.props;
+
 const src = `https://www.youtube.com/embed/${id}`;
 ---
 

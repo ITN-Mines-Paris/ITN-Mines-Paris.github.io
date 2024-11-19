@@ -1,5 +1,9 @@
 ---
-import Topic from "/src/components/mareva-topic-alt.astro";
+import Topic, { type MarevaTopicType } from "./mareva-topic-alt.astro";
+
+type Props = {
+  name: MarevaTopicType
+};
 const { name } = Astro.props;
 ---
 

@@ -1,24 +1,37 @@
 ---
 import { Icon } from "astro-icon";
+
+const supportedStyles = {
+  white: {
+    textColor: "text-white",
+    backgroundColor: "bg-bkack",
+  },
+  black: {
+    textColor: "text-black",
+    backgroundColor: "bg-white",
+  },
+  sky: {
+    textColor: "text-sky-600",
+    backgroundColor: "bg-sky-100",
+  },
+  purple: {
+    textColor: "text-purple-600",
+    backgroundColor: "bg-purple-100",
+  },
+  red: {
+    textColor: "text-red-600",
+    backgroundColor: "bg-red-100",
+  },
+};
+type SupportedStyle = keyof typeof supportedStyles;
+
+type Props = {
+  color?: SupportedStyle;
+  icon?: string;
+};
 const { color = "white", icon = "circle-filled" } = Astro.props;
 
-let textColor;
-let backgroundColor;
-
-if (color == "white") {
-  textColor = "text-white";
-  backgroundColor = "bg-black";
-} else if (color == "black") {
-  textColor = "text-black";
-  backgroundColor = "bg-white";
-} else {
-  textColor = `text-${color}-600`;
-  backgroundColor = `bg-${color}-100`;
-}
-
-// Tailwind tree shaker
-("bg-sky-100 bg-purple-100 bg-red-100 bg-black bg-white");
-("text-sky-600 text-purple-600 text-red-600 text-white text-black");
+const { textColor, backgroundColor} = supportedStyles[color];
 ---
 
 <li class="relative">

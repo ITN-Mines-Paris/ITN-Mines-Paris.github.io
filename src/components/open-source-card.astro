@@ -2,6 +2,17 @@
 import { Icon } from "astro-icon";
 import { Picture } from "@astrojs/image/components";
 
+export type OpenSourceProject = {
+  name: string;
+  by: string;
+  image: ImageMetadata;
+  description: string;
+  homepage: string;
+  github: string;
+  license: string;
+};
+
+type Props = OpenSourceProject;
 const { name, by, image, description, homepage, github, license } = Astro.props;
 ---
 

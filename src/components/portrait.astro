@@ -2,8 +2,23 @@
 import Tag from "@components/named-tag.astro"
 import { Icon } from "astro-icon";
 
-const { attrs } = Astro.props;
-const { name, role, email, url, linkedin, github, skills } = attrs;
+export type TeamMember = {
+  name: string;
+  role: string;
+  email: string;
+  linkedin?: string;
+  github?: string;
+  url?: string;
+  skills: {
+    [key: string]: string[];
+  };
+};
+
+type Props = {
+    attrs: TeamMember;
+};
+const { name, role, email, url, linkedin, github, skills } = Astro.props.attrs;
+
 const emailHref = `mailto:${email}?cc=itn@minesparis.psl.eu&subject=[ITN]`;
 const image = `${import.meta.env.BASE_URL}portraits/${name}.webp`;
 const linkedinHref = linkedin && `https://www.linkedin.com/in/${linkedin}/`;

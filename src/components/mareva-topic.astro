@@ -8,6 +8,9 @@ const icons = {
   Apprentissage: "brain",
 };
 
+type Props = {
+  name: keyof typeof icons;
+};
 const { name } = Astro.props;
 ---
 

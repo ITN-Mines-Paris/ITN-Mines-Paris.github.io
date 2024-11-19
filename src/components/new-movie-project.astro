@@ -1,33 +1,8 @@
 ---
 import { Image } from "@astrojs/image/components";
-import { Picture } from "@astrojs/image/components";
-import Link from "@components/ui/card-link.astro";
 import { Icon } from "astro-icon";
 
-type TagType =
-  | "Photogrammétrie"
-  | "Modélisation 3D"
-  | "Interactions"
-  | "Accessibilité"
-  | "Réalité Augmentée"
-  | "Réalité Virtuelle"
-  | "Collaboration"
-  | "Programmation"
-  | "Innovation";
-
-interface Props {
-  title: string;
-  author: string;
-  description: string;
-  image: string;
-  url?: string;
-  tags?: TagType[];
-}
-
-let { title, author, description, image, url, tags } = Astro.props;
-
-tags = tags || [];
-
+  // les icônes supportées
 const icons = {
   Photogrammétrie: "stereo-glasses",
   "Modélisation 3D": "frustum",
@@ -39,6 +14,17 @@ const icons = {
   Programmation: "code",
   Innovation: "bulb",
 };
+type TagType = keyof typeof icons;
+
+type Props = {
+  title: string;
+  author: string;
+  description: string;
+  image: string;
+  url?: string;
+  tags?: TagType[];
+}
+const { title, author, description, image, url, tags=[] } = Astro.props;
 
 // import crossingTheLandscape from "assets/crossing-the-landscape.png";
 
@@ -52,8 +38,8 @@ const icons = {
     src={image}
     class="hidden md:inline-block rounded-l-md m-0"
     alt="Crossing the Landscape"
-    width="196"
-    height="196"
+    width={196}
+    height={196}
     loading="eager"
     format="avif"
   />

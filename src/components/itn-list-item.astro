@@ -1,6 +1,9 @@
 ---
-import Topic from "/src/components/itn-topic.astro";
+import Topic, { type ItnTopicType } from "./itn-topic.astro";
 
+type Props = {
+  name: ItnTopicType;
+};
 const { name } = Astro.props;
 ---
 

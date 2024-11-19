@@ -1,9 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 
-const { type } = Astro.props;
-
-const style = {
+const AvailableStyles = {
   "Ingénierie Numérique": {
     iconName: "abacus",
     iconColor: "text-sky-600",
@@ -28,8 +26,15 @@ const style = {
     backgroundColor: "bg-slate-100",
     textColor: "text-slate-900",
   },
-}[type]
+}
+type TagType = keyof typeof AvailableStyles;
 
+type Props = {
+  type: TagType;
+};
+const { type } = Astro.props;
+
+const style = AvailableStyles[type];
 ---
 
 <span class={`py-1 px-1 rounded relative ${style.backgroundColor} ${style.iconColor}`}>

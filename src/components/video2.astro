@@ -1,10 +1,17 @@
 ---
 import { Icon } from "astro-icon";
-import { Image } from "@astrojs/image/components";
+import { Image} from "@astrojs/image/components";
 
+// image par défaut
 import esquive1 from "assets/L'Art de l'Esquive 1.png";
 
+type Props = {
+    id: string;
+    title: string;
+    image?: ImageMetadata;
+};
 const { id, title, image = esquive1 } = Astro.props;
+
 const src = `https://www.youtube.com/embed/${id}`;
 ---
 

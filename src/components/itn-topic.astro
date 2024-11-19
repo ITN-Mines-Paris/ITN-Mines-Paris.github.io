@@ -4,27 +4,28 @@ import { Icon } from "astro-icon";
 const icons = {
   "Ingénierie Numérique": {
     name: "abacus",
-    iconColor: "sky-600",
-    backgroundColor: "sky-100",
+    iconColor: "text-sky-600",
+    backgroundColor: "bg-sky-100",
   },
   "Industries Culturelles et Créatives": {
     name: "tabler:palette",
-    iconColor: "purple-600",
-    backgroundColor: "purple-100",
+    iconColor: "text-purple-600",
+    backgroundColor: "bg-purple-100",
   },
   "Santé Numérique": {
     name: "tabler:vaccine",
-    iconColor: "red-600",
-    backgroundColor: "red-100",
+    iconColor: "text-red-600",
+    backgroundColor: "bg-red-100",
   },
 };
+export type ItnTopicType = keyof typeof icons;
 
+type Props = {
+  name: ItnTopicType;
+};
 const { name } = Astro.props;
-const icon = icons[name];
 
-`bg-sky-100 text-sky-600 
-bg-purple-100 text-purple-600
-bg-red-100 bg-red-600`;
+const icon = icons[name];
 ---
 
 <span
@@ -34,10 +35,10 @@ bg-red-100 bg-red-600`;
   title={name}>
   <span style="position: relative; top:0.0625em;">
     <span
-      class={`bg-${icon.backgroundColor} top-1 mt-0 w-5 h-5 rounded inline-flex items-center justify-center`}>
+      class={`${icon.backgroundColor} top-1 mt-0 w-5 h-5 rounded inline-flex items-center justify-center`}>
       <Icon
         name={icon.name}
-        class={`text-${icon.iconColor} inline-block w-4 h-4`}
+        class={`${icon.iconColor} inline-block w-4 h-4`}
       />
     </span>
   </span>
