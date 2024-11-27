@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boisgera.github.io/itn-web/sitemap-index.xml
