@@ -15,25 +15,19 @@ jobs:
       #   uses: actions/setup-python@v4
 
       - name: Install Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "18"
-
-      - name: Install PNPM
-        run: npm install -g pnpm
+          node-version: "20.17.0"
+          cache: "npm"
 
       - name: Install project Dependencies
-        run: pnpm install
+        run: npm ci
 
       - name: Patch astro config
         run: node patch-astro-config.js
 
       - name: Build
-        run: pnpm run build
-
-      # - name: Post-Build Setup
-      #   run: |
-      #     python patch-hrefs-for-gh-pages.py
+        run: npm run build
 
       - name: Deployment Setup
         run: |
