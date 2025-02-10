@@ -4,23 +4,23 @@ import { Icon } from "astro-icon";
 const icons = {
   Robotique: {
     name: "robot",
-    color: "rose-500",
-    background: "rose-200",
+    color: "text-rose-500",
+    background: "bg-rose-200",
   },
   Automatique: {
     name: "settings-automation",
-    color: "orange-500",
-    background: "orange-200",
+    color: "text-orange-500",
+    background: "bg-orange-200",
   },
   Vision: {
     name: "eye",
-    color: "blue-500",
-    background: "blue-200",
+    color: "text-blue-500",
+    background: "bg-blue-200",
   },
   Apprentissage: {
     name: "brain",
-    color: "purple-500",
-    background: "purple-200",
+    color: "text-purple-500",
+    background: "bg-purple-200",
   },
 };
 export type MarevaTopicType = keyof typeof icons;
@@ -40,10 +40,10 @@ const icon = icons[name];
   title={name}>
   <span style="position: relative; top:0.0625em;">
     <span
-      class={`bg-${icon.background} top-1 mt-0 w-5 h-5 rounded inline-flex items-center justify-center`}>
+      class={`${icon.background} top-1 mt-0 w-5 h-5 rounded inline-flex items-center justify-center`}>
       <Icon
         name={icon.name}
-        class={`text-${icon.color} inline-block w-4 h-4`}
+        class={`${icon.color} inline-block w-4 h-4`}
       />
     </span>
   </span>
