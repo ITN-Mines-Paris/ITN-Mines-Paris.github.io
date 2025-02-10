@@ -2,20 +2,22 @@
 draft: false
 title: "Séminaire Santé Numérique"
 description: "Retrouvez-nous pour un après-midi de conférences sur le thème de la santé numérique autour de regards croisés de chercheurs et de témoignages d'industriels et de start-ups."
-image: "/images/seminaire-sante-numerique.jpg"
+image: "assets/seminaire-sante-numerique.jpg"
 date: "2024-09-17 12:00"
 category: "Formation"
 author: "ITN"
 tags: [recherche, séminaire]
 ---
 
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import heroImage from "assets/seminaire-sante-numerique.jpg";
 
 <Image
   src={heroImage}
   alt="Présentation du séminaire Santé Numérique - le 19 septembre 2024 à l'amphithéâtre Schlumberger"
   loading="eager"
+  width={3000}
+  height={1687}
 />
 
 L'Institut des Transformations Numériques (ITN) de Mines Paris - PSL vous propose une après-midi de conférences sur le thème de la santé numérique autour de regards croisés de chercheurs et de témoignages d'industriels et de start-ups.

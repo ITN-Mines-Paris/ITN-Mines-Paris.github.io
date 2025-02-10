@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 import heroImage from "assets/procedural-city.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
@@ -13,7 +13,7 @@ import { Icon } from "astro-icon";
       class="rounded-md"
       alt="Procedural City"
       widths={[200, 400, 600, 800, 1000]}
-      aspectRatio="4:3"
+      inferSize={true}
       sizes="(max-width: 1024px) 100vw, 620px"
       loading="eager"
       format="avif"

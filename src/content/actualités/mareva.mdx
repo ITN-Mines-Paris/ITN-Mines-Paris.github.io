@@ -10,7 +10,7 @@ tags: [automatique, robotique, vision, apprentissage]
 ---
 
 import { Icon } from "astro-icon";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import Topic from "components/mareva-topic-alt.astro";
 import ListItem from "components/mareva-list-item.astro";
 import robot from "assets/robot-crabe.jpg";
@@ -21,6 +21,7 @@ import robot from "assets/robot-crabe.jpg";
   width="768"
   loading="eager"
   format="avif"
+  inferSize={true}
 />
 
 Les responsables de l'option MAREVA et professeurs à Mines Paris – PSL

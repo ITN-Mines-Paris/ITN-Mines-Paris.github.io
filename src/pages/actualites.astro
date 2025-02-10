@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import { Image, Picture } from "@astrojs/image/components";
+import { Image, Picture } from "astro:assets";
 import Layout from "@layouts/NewLayout.astro";
 import salleCortot from "assets/salle-cortot.png";
+import findImageDimensionsParams from "@utils/findImageDimensions";
 
 // Filter blog entries with 'draft: false' & date before current date
 const publishedBlogEntries = await getCollection("actualités", ({ data }) => {
@@ -31,58 +32,61 @@ function patch_url(url) {
   <main class="mt-16">
     <ul class="grid gap-16 max-w-4xl mx-auto">
       {
-        publishedBlogEntries.map((blogPostEntry, index) => (
-          <li>
-            <a
-              href={`${import.meta.env.BASE_URL}actualites/${
-                blogPostEntry.slug
-              }`}>
-              <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <Picture
-                  src={blogPostEntry.data.image}
-                  alt={blogPostEntry.data.title}
-                  sizes="(max-width: 800px) 100vw, 800px"
-                  widths={[200, 400, 800]}
-                  aspectRatio="16:9"
-                  background="#ffffff"
-                  fit="cover"
-                  position="center"
-                  loading={index <= 2 ? "eager" : "lazy"}
-                  decoding={index <= 2 ? "sync" : "async"}
-                  class="w-full rounded-md"
-                />
-                <div>
-                  <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                    {blogPostEntry.data.category}
-                  </span>
-
-                  <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                    {blogPostEntry.data.title}
-                  </h2>
-
-                  <div class="flex gap-2 mt-3">
-                    <span class="text-gray-400">
-                      {blogPostEntry.data.author}
+        publishedBlogEntries.map((blogPostEntry, index) => {
+          const { height: imageHeight } = findImageDimensionsParams(
+            blogPostEntry.data.image
+          );
+          return (
+            <li>
+              <a
+                href={`${import.meta.env.BASE_URL}actualites/${
+                  blogPostEntry.slug
+                }`}>
+                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+                  <Picture
+                    src={blogPostEntry.data.image}
+                    alt={blogPostEntry.data.title}
+                    width="428"
+                    height="240"
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    fit="cover"
+                    position="center"
+                    loading={index <= 2 ? "eager" : "lazy"}
+                    class="w-full rounded-md"
+                  />
+                  <div>
+                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                      {blogPostEntry.data.category}
                     </span>
-                    <span class="text-gray-400">• </span>
-                    <time
-                      class="text-gray-400"
-                      datetime={blogPostEntry.data.date.toISOString()}>
-                      {blogPostEntry.data.date
-                        .toLocaleDateString("fr-FR", {
-                          weekday: "short",
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })
-                        .replace(/^\w/, (c) => c.toUpperCase())}
-                    </time>
+
+                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                      {blogPostEntry.data.title}
+                    </h2>
+
+                    <div class="flex gap-2 mt-3">
+                      <span class="text-gray-400">
+                        {blogPostEntry.data.author}
+                      </span>
+                      <span class="text-gray-400">• </span>
+                      <time
+                        class="text-gray-400"
+                        datetime={blogPostEntry.data.date.toISOString()}>
+                        {blogPostEntry.data.date
+                          .toLocaleDateString("fr-FR", {
+                            weekday: "short",
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })
+                          .replace(/^\w/, (c) => c.toUpperCase())}
+                      </time>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          </li>
-        ))
+              </a>
+            </li>
+          );
+        })
       }
     </ul>
   </main>

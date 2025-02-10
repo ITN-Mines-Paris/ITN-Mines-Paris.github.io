@@ -1,7 +1,7 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
-
+import findImageDimensionsParams from "@utils/findImageDimensions";
 
 const icons = {
   Photogrammétrie: "stereo-glasses",
@@ -23,9 +23,18 @@ type Props = {
   url: string;
   tags: string | string[];
 };
-const { title, author, description, image, url, tags: tagListOrString } = Astro.props;
+const {
+  title,
+  author,
+  description,
+  image,
+  url,
+  tags: tagListOrString,
+} = Astro.props;
 
-const tagList = Array.isArray(tagListOrString) ? tagListOrString : tagListOrString.split(",");
+const tagList = Array.isArray(tagListOrString)
+  ? tagListOrString
+  : tagListOrString.split(",");
 const tags = tagList.map((tag) => tag.trim());
 ---
 

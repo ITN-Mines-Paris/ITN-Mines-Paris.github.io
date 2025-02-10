@@ -2,14 +2,14 @@
 draft: false
 title: "Soirée-événement de l'ITN"
 description: "Une soirée exceptionnelle mêlant présentation des actions de l'Institut et concert immersif, suivie d'un cocktail networking avec démonstrations technologiques."
-image: "/images/soiree-evenement-itn.jpg"
+image: "assets/soiree-evenement-itn.jpg"
 date: "2024-11-04 10:00"
 category: "Événement"
 author: "ITN"
 tags: [événement, concert, numérique]
 ---
 
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import heroImage from "assets/soiree-evenement-itn.jpg";
 import concertImage from "assets/hero-concert.jpg";
 
@@ -17,6 +17,7 @@ import concertImage from "assets/hero-concert.jpg";
   src={heroImage}
   alt="Soirée-événement de l'ITN - le 6 décembre 2024 à la Salle Cortot"
   loading="eager"
+  inferSize={true}
 />
 
 L'Institut des Transformations Numériques (ITN) de Mines Paris - PSL vous convie à une soirée exceptionnelle alliant présentation institutionnelle et performance artistique augmentée par les technologies numériques.
@@ -40,6 +41,7 @@ L'Institut des Transformations Numériques (ITN) de Mines Paris - PSL vous convi
   src={concertImage}
   alt="Nos activités artistique et scientifiques"
   loading="lazy"
+  inferSize={true}
 />
 
 <dl className="divide-y divide-gray-100">

@@ -6,16 +6,18 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import Sectionhead from "@components/sectionhead.astro";
+import { INVALID, undefined } from "astro:schema";
+
 
 interface Props {
   title?: string;
   description?: string;
   heading?: string;
   no_header?: boolean;
-  image?: string;
+  image?: {src: string};
   type?: "website" | "article";
 }
-let { title, no_header = false, description, image, type } = Astro.props;
+let { title, no_header = false, description, image: imageAttributes, type } = Astro.props;
 
 let url = Astro.url.href;
 if (url.endsWith("/")) {
@@ -36,7 +38,7 @@ description = description
   ? description
   : "Sciences et technologies du numérique à Mines Paris – PSL";
 
-image = image ? image : "/opengraph.jpg";
+let image = imageAttributes?.src ? imageAttributes.src : "/opengraph.jpg";
 if (!image.startsWith("http://") && !image.startsWith("https://")) {
   // external resource
   if (image.startsWith("/")) {
@@ -52,7 +54,7 @@ if (!image.startsWith("http://") && !image.startsWith("https://")) {
 type = type ? type : "website";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <!-- <base href={base} /> -->

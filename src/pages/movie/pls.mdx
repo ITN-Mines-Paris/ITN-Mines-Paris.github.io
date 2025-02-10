@@ -6,7 +6,7 @@ layout: ../../layouts/MDLayout.astro
 
 Vous mettrez en place une application VR permettant de former à la procédure de mise en sécurité d'une personne vistime d'un malaise.
 
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 import imagepls from "assets/movie/assistancepls.jpg";
 
@@ -22,7 +22,9 @@ import imagepls from "assets/movie/assistancepls.jpg";
       format="avif"
     />
     <div class="inline-block ml-4">
-      <span>Application d'apprentissage de l'assistance aux victimes en VR</span>
+      <span>
+        Application d'apprentissage de l'assistance aux victimes en VR
+      </span>
       <br />
     </div>
   </div>

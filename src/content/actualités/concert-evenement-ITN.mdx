@@ -3,16 +3,15 @@ draft: false
 title: "Concert Évènement ITN"
 description: "Soirée de lancement de l'ITN. Création immersive à partir d’un concert Chopin - Wissmer, avec le soutien de l’École Normale de Musique de Paris, la fondation Mines Paris, l’Institut des Transformations Numériques de Mines Paris - PSL, CRESCENDO-APJM, l’Ircam, ArtenetrA, l’Action Musicale Pierre Wissmer, 
 l’Association Métavers Arts & Culture."
-image: "/salle-cortot.jpg"
+image: assets/salle-cortot.jpg
 date: "2023-10-03 17:30"
 category: "Évènements"
 author: "Brigitte d'Andréa-Novel"
 tags: [art, musique, création, IA, métavers]
 ---
 
-
 import salleCortot from "assets/salle-cortot.jpg";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 <Image
   src={salleCortot}
@@ -22,60 +21,54 @@ import { Image } from "@astrojs/image/components";
   format="avif"
 />
 
-Intelligence artificielle, modélisation, traitement des données, 
-contrôle des systèmes complexes, informatique quantique, 
-technologies immersives ... 
-les sciences et technologies numériques sont au cœur des défis sociétaux et 
+Intelligence artificielle, modélisation, traitement des données,
+contrôle des systèmes complexes, informatique quantique,
+technologies immersives ...
+les sciences et technologies numériques sont au cœur des défis sociétaux et
 industriels du futur.
 
-Avec l’[Institut des Transformations Numériques (ITN)](https://www.itn.dev), 
-Mines Paris – PSL mobilise ses forces de recherche pluridisciplinaires 
-et ses formations pour accompagner au mieux ses partenaires dans leurs 
+Avec l’[Institut des Transformations Numériques (ITN)](https://www.itn.dev),
+Mines Paris – PSL mobilise ses forces de recherche pluridisciplinaires
+et ses formations pour accompagner au mieux ses partenaires dans leurs
 révolutions digitales.
-
 
 import HeroPre from "/src/components/cortot/hero-pre.astro";
 
 <HeroPre />
 
- 
-Autour d’un cocktail et de démonstrations d’espaces métavers, 
-l’[équipe de l’ITN](../equipe) vous 
-permettra de découvrir des projets de recherche et d'échanger 
-sur les applications potentielles des technologies numériques 
+Autour d’un cocktail et de démonstrations d’espaces métavers,
+l’[équipe de l’ITN](../equipe) vous
+permettra de découvrir des projets de recherche et d'échanger
+sur les applications potentielles des technologies numériques
 dans vos activités.
 
 <hr />
 
-La soirée se poursuivra, en présence d'un plus large public, 
-par une expérience artistique, numérique et immersive 
-inédite autour des œuvres de Frédéric Chopin et Pierre Wissmer. 
-
+La soirée se poursuivra, en présence d'un plus large public,
+par une expérience artistique, numérique et immersive
+inédite autour des œuvres de Frédéric Chopin et Pierre Wissmer.
 
 import Hero from "/src/components/cortot/hero.astro";
 
 <Hero />
 
-Les Industries Culturelles et Créatives 
+Les Industries Culturelles et Créatives
 – l'un des [trois axes de développement de l'ITN](https://itn.dev/projets) –
-y seront mises à l’honneur, 
-en faisant vivre au public en salle et à distance 
-une expérience immersive unique autour de l’art, de la musique et du métavers. 
- 
-
+y seront mises à l’honneur,
+en faisant vivre au public en salle et à distance
+une expérience immersive unique autour de l’art, de la musique et du métavers.
 
 ### Programme musical
 
 Le concert s'inscrit dans la 8ème édition du festival Musique aux Mines.
 Au programme :
 
-
     - Frédéric Chopin : Concerto No. 1 en Mi Mineur pour piano et orchestre (1830),
 
     - Pierre Wissmer : 3ème symphonie pour orchestre à cordes (1955).
 
-La pianiste soliste sera Yuki Kinouchi, Artist Diploma 2023 de l’École normale 
-de musique de Paris. 
+La pianiste soliste sera Yuki Kinouchi, Artist Diploma 2023 de l’École normale
+de musique de Paris.
 
 import YK from "assets/cortot/Yuki Kinouchi.jpeg";
 
@@ -83,59 +76,55 @@ import YK from "assets/cortot/Yuki Kinouchi.jpeg";
   src={YK}
   alt="Yoki Kinouchi"
   width="768"
+  inferSize={true}
   format="avif"
 />
 
-
-L’Orchestre de Chambre Quartier Latin (OCQL) sera placé sous la direction 
+L’Orchestre de Chambre Quartier Latin (OCQL) sera placé sous la direction
 de Marc-Antoine Novel.
-
 
 import OCQL from "assets/cortot/OCQL2.jpg";
 
-<Image
-  src={OCQL}
-  alt="OCQL"
-  width="768"
-  format="avif"
-/>
-
+<Image src={OCQL} alt="OCQL" width="768" inferSize={true} format="avif" />
 
 ### Création & Mondes Virtuels
 
-Le concert sera l’occasion d’une promenade artistique dans le métavers, 
-pour le public de la salle Cortot comme pour les avatars du public 
+Le concert sera l’occasion d’une promenade artistique dans le métavers,
+pour le public de la salle Cortot comme pour les avatars du public
 présent en réalité virtuelle.
 
 Cet environnement virtuel sera le lieu de la création d’œuvres graphiques digitales
-inspirées par la musique de Pierre Wissmer, 
-réalisées par les artistes chinois Yang Jiechang et An Xiaotong, 
-en collaboration avec la curatrice et commissaire d’exposition 
-Martina Koeppel-Yang. 
+inspirées par la musique de Pierre Wissmer,
+réalisées par les artistes chinois Yang Jiechang et An Xiaotong,
+en collaboration avec la curatrice et commissaire d’exposition
+Martina Koeppel-Yang.
 
 import YJ from "assets/cortot/Yang Jiechang - Untitled.jpg";
 
 <div style="max-width:512px;margin-left:auto;margin-right:auto;">
-<Image
-  src={YJ}
-  alt="Yang Jiechang"
-  width="768"
-  format="avif"
-  style="width:100%; margin-bottom:0.75rem;"
-/>
-<p style="font-size:0.875rem;margin-top:0.25rem;"> Untitled 无题, 1983. Encre sur papier. 67 x 66.5 cm. © Yang Jiechang.</p>
+  <Image
+    src={YJ}
+    alt="Yang Jiechang"
+    width="768"
+    format="avif"
+    style="width:100%; margin-bottom:0.75rem;"
+  />
+  <p style="font-size:0.875rem;margin-top:0.25rem;">
+    {" "}
+    Untitled 无题, 1983. Encre sur papier. 67 x 66.5 cm. © Yang Jiechang.
+  </p>
 </div>
 
 Les publics en salle et dans le métavers pourront dans un second temps
-participer à une projection de films d’animation générés par 
-une intelligence artificielle (IA) instruite du récit narratif 
+participer à une projection de films d’animation générés par
+une intelligence artificielle (IA) instruite du récit narratif
 de la symphonie de Wissmer.
 
 ### Partenaires
 
-Le concert événement "Chopin et Wissmer en immersion" est organisé par 
-l'Institut des Transformations Numériques (ITN) de Mines Paris - PSL et 
-le Festival Musique aux Mines, en collaboration la société Aika, 
+Le concert événement "Chopin et Wissmer en immersion" est organisé par
+l'Institut des Transformations Numériques (ITN) de Mines Paris - PSL et
+le Festival Musique aux Mines, en collaboration la société Aika,
 SNCF Réseau et UCANSS.
 
 Les outils de création sont développés par des étudiants de [MOVIE],
@@ -145,6 +134,6 @@ et la société [Aika], pionnière dans l’art et les technologies immersives.
 [MOVIE]: ../actualites/movie
 [Aika]: https://aika-link.art/
 
-Cet événement est soutenu par l’École Normale de Musique de Paris, la fondation Mines Paris, 
+Cet événement est soutenu par l’École Normale de Musique de Paris, la fondation Mines Paris,
 GSE, la Caisse des Dépôts et Consignations, les champagnes Ruinart, CRESCENDO-APJM,
 ArtenetrA, l’Action Musicale Pierre Wissmer et l’Association Métavers Arts & Culture.

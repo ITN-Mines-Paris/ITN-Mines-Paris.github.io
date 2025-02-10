@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 
 export type OpenSourceProject = {
   name: string;
@@ -25,7 +25,7 @@ const { name, by, image, description, homepage, github, license } = Astro.props;
         alt={name}
         class="rounded-md my-0 mb-4"
         widths={[200, 400, 600]}
-        aspectRatio="16:9"
+        inferSize={true}
       />
     )
   }

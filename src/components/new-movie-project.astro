@@ -1,8 +1,8 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 
-  // les icônes supportées
+// les icônes supportées
 const icons = {
   Photogrammétrie: "stereo-glasses",
   "Modélisation 3D": "frustum",
@@ -23,8 +23,8 @@ type Props = {
   image: string;
   url?: string;
   tags?: TagType[];
-}
-const { title, author, description, image, url, tags=[] } = Astro.props;
+};
+const { title, author, description, image, url, tags = [] } = Astro.props;
 
 // import crossingTheLandscape from "assets/crossing-the-landscape.png";
 
