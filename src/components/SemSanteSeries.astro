@@ -1,0 +1,39 @@
+---
+import ArticleSeries, { type Article } from "components/ArticleSeries.astro";
+
+const articles: Article[] = [
+  {
+    number: 1,
+    title: "Introduction",
+    href: "/actualites/semsante-1-introduction",
+  },
+  {
+    number: 2,
+    title: "Le jumeau numérique pour la santé",
+    href: "/actualites/semsante-2-jumeau-numerique",
+  },
+  {
+    number: 3,
+    title: "Transformation numérique et enjeux hospitaliers",
+    href: "/actualites/semsante-3-jumeau-numerique",
+  },
+  {
+    number: 4,
+    title: "Le numérique et l’IA pour la santé à toutes les échelles",
+    href: "/actualites/semsante-4-numerique-et-ia",
+  },
+];
+
+type Props = {
+  current: number;
+};
+
+const { current } = Astro.props;
+---
+
+<ArticleSeries
+  title="Série Séminaire Santé Numérique"
+  description="Cette série de quatre articles constitue un compte-rendu du séminaire Santé Numérique organisé par l'ITN."
+  current={current}
+  articles={articles}
+/>

@@ -1,0 +1,40 @@
+---
+export interface Article {
+    number: number;
+    title: string;
+    href: string;
+}
+
+interface Props {
+    title: string;
+    description?: string;
+    articles: Article[];
+    current?: number;
+}
+
+const { title, description, articles, current } = Astro.props;
+---
+
+<div class="my-8 p-4 bg-gray-100 rounded-lg">
+    <h3 class="text-xl font-bold mb-4 uppercase">{title}</h3>
+    <p class="text-sm text-gray-500">{description}</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {articles.map((article) => (
+            <div class={`p-3 bg-white rounded shadow-sm border-l-4 ${
+                article.number === current ? 'border-blue-500' : 'border-gray-300 hover:border-blue-500 transition-colors'
+            }`}>
+                {article.number === current ? (
+                    <>
+                        <span class="text-blue-500 font-bold">{article.number}.</span>
+                        {article.title}
+                    </>
+                ) : (
+                    <a href={article.href} class="block">
+                        <span class="text-gray-500 font-bold">{article.number}.</span>
+                        {article.title}
+                    </a>
+                )}
+            </div>
+        ))}
+    </div>
+</div> 
