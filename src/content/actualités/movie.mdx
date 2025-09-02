@@ -71,7 +71,7 @@ MOVIE développe les compétences des étudiants dans les domaines suivants :
 </div>
 
 Cours et conférences préparent les projets d’ingénierie, qui forment le volet
-pratique de l'enseignement. Les thématiques différent chaque année ;
+pratique de l'enseignement. Les thématiques diffèrent chaque année ;
 vous trouverez ci-dessous une liste des projets des années précédentes, ainsi que ceux de la session à venir.
 
 ### MOVIE 2025
@@ -91,17 +91,30 @@ export const clefdevouteDescription = `
   url="../../movie/architecture"
 />
 
-import theatre from "assets//movie/theatre.jpg";
-export const theatreDescription = `
-  Pour accompagner la gestion raisonnée des décors du théâtre du Châtelet, vous numériserez les décors existants et mettrez en place une application d'exploration de ces décors en réalité virtuelle.`;
+import theatre1 from "assets//movie/theatre1.jpg";
+export const theatre1Description = `
+  Pour accompagner la gestion raisonnée des décors du théâtre du Châtelet, vous visualiserez et testerez des décors en VR/AR à l’échelle 1 pour les répétitions techniques.`;
 
 <MovieProject
-  title="Conception des décors de théâtre en VR"
-  author="Théâtre du Châtelet"
-  image={theatre}
-  description={theatreDescription}
+  title="Bauprobe Immersive"
+  author="Théâtre du Châtelet, Mines Paris PSL"
+  image={theatre1}
+  description={theatre1Description}
   tags={["Interactions", "Photogrammétrie", "Réalité Virtuelle","Programmation"]}
-  url="../../movie/theatre"
+  url="../../movie/theatre1"
+/>
+
+import theatre2 from "assets//movie/theatre.jpg";
+export const theatre2Description = `
+  Ce projet vise une prévisualisation incarnée en réalité virtuelle des dynamiques techniques et artistiques du spectacle.`;
+
+<MovieProject
+  title="Mouvements scéniques en VR"
+  author="Théâtre du Châtelet, Mines Paris PSL"
+  image={theatre2}
+  description={theatre2Description}
+  tags={["Interactions", "Photogrammétrie", "Réalité Virtuelle","Programmation"]}
+  url="../../movie/theatre2"
 />
 
 import gesteverrier from "assets//movie/verre.jpg";
