@@ -1,0 +1,454 @@
+<!DOCTYPE html><html lang="fr"> <head><!-- <base href={base} /> --><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.13.5"><title>Séminaire Santé Numérique - Transformation numérique et enjeux hospitaliers | ITN</title><link rel="canonical" href="https://itn.dev/actualites/semsante-3-jumeau-numerique"><meta name="description" content="Suite à la première édition du séminaire Santé Numérique, l'ITN a publié un compte-rendu de l'événement. (3/4)"><meta name="robots" content="index, follow"><meta property="og:title" content="Séminaire Santé Numérique - Transformation numérique et enjeux hospitaliers | ITN"><meta property="og:type" content="website"><meta property="og:image" content="https://itn.dev/_astro/seminaire-sante-numerique.Dz0kH0XH.jpg"><meta property="og:url" content="https://itn.dev/actualites/semsante-3-jumeau-numerique"><meta property="og:description" content="Suite à la première édition du séminaire Santé Numérique, l'ITN a publié un compte-rendu de l'événement. (3/4)"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@ITN_MinesParis"><meta name="twitter:title" content="Séminaire Santé Numérique - Transformation numérique et enjeux hospitaliers | ITN"><meta name="twitter:image" content="https://itn.dev/_astro/seminaire-sante-numerique.Dz0kH0XH.jpg"><meta name="twitter:description" content="Suite à la première édition du séminaire Santé Numérique, l'ITN a publié un compte-rendu de l'événement. (3/4)"><meta name="twitter:creator" content="@ITN_MinesParis"><link rel="stylesheet" href="/_astro/actualites.CAjKQ35n.css">
+<style>@font-face{font-family:Inter Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(/_astro/inter-cyrillic-ext-wght-normal.B2xhLi22.woff2) format("woff2-variations");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(/_astro/inter-cyrillic-wght-normal.CMZtQduZ.woff2) format("woff2-variations");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(/_astro/inter-greek-ext-wght-normal.CGAr0uHJ.woff2) format("woff2-variations");unicode-range:U+1F00-1FFF}@font-face{font-family:Inter Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(/_astro/inter-greek-wght-normal.CaVNZxsx.woff2) format("woff2-variations");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}@font-face{font-family:Inter Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(/_astro/inter-vietnamese-wght-normal.CBcvBZtf.woff2) format("woff2-variations");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(/_astro/inter-latin-ext-wght-normal.CFHvXkgd.woff2) format("woff2-variations");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(/_astro/inter-latin-wght-normal.C2S99t-D.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}html{-webkit-hyphens:auto;hyphens:auto}img{content-visibility:auto}
+</style></head><body> <div class="max-w-screen-xl mx-auto px-5">  <header class="flex flex-col lg:flex-row justify-between items-center my-5">  <div class="flex w-full lg:w-auto items-center justify-between"> <a href="/" class="text-2xl"><span class="text-3xl flex items-baseline gap-1"> <span class="relative inline-block" style="height:1em; top: 0.05em"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="36" height="36" viewBox="0 0 36 36" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <g transform="scale(1.5)"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M7 8l-4 4l4 4"></path> <path d="M17 8l4 4l-4 4"></path> <path d="M14 4l-4 16"></path> </g> </svg> </span> <span class="font-bold text-slate-800">ITN</span> </span></a> <div class="block lg:hidden"> <button id="astronav-menu" aria-label="Toggle Menu">  <svg fill="currentColor" class="w-4 h-4 text-gray-800" width="24" height="24" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"> <title>Toggle Menu</title> <path class="astronav-close-icon astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path> <path class="astronav-open-icon astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path> </svg>  </button> </div> </div> <nav class="astronav-items astronav-toggle hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">  <ul class="flex flex-col lg:flex-row lg:gap-3"> <li> <a href="/organisation" aria-label="Organisation" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"> Organisation </a> </li><li> <a href="/equipe" aria-label="Equipe" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"> Equipe </a> </li><li> <a href="/actualites" aria-label="Actualités" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"> Actualités </a> </li><li> <a href="/projets" aria-label="Projets" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"> Projets </a> </li><li> <a href="/mentions" aria-label="Mentions" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"> Mentions </a> </li><li> <a href="/contact" aria-label="Contact" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"> Contact </a> </li> <li> <div class="h-10 items-center gap-4 flex lg:hidden"> <a href="https://x.com/ITN_MinesParis" aria-label="X"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-black w-6 h-6" viewBox="0 0 24 24" astro-icon="brand-x"><path stroke="none" d="M0 0h24v24H0z"/><path d="m4 4 11.733 16H20L8.267 4zM4 20l6.768-6.768m2.46-2.46L20 4"/></svg></a> <a href="https://www.linkedin.com/in/itn-institut-des-transformations-num%C3%A9riques-mines-paris-psl-0b944027a" aria-label="Linkedin"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-black w-6 h-6" viewBox="0 0 24 24" astro-icon="brand-linkedin"><path stroke="none" d="M0 0h24v24H0z"/><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM8 11v5M8 8v.01M12 16v-5"/><path d="M16 16v-3a2 2 0 0 0-4 0"/></svg></a> <a href="https://github.com/orgs/ITN-Mines-Paris" aria-label="Github"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="text-black w-6 h-6" viewBox="0 0 24 24" astro-icon="brand-github"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a> </div> </li> </ul>  </nav>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      ".astronav-dropdown button, .astronav-dropdown-submenu button, #astronav-menu"
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> <div> <div class="h-10 items-center gap-4 lg:flex hidden"> <a href="https://x.com/ITN_MinesParis" aria-label="X"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-black w-6 h-6" viewBox="0 0 24 24" astro-icon="brand-x"><path stroke="none" d="M0 0h24v24H0z"/><path d="m4 4 11.733 16H20L8.267 4zM4 20l6.768-6.768m2.46-2.46L20 4"/></svg></a> <a href="https://www.linkedin.com/in/itn-institut-des-transformations-num%C3%A9riques-mines-paris-psl-0b944027a" aria-label="Linkedin"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-black w-6 h-6" viewBox="0 0 24 24" astro-icon="brand-linkedin"><path stroke="none" d="M0 0h24v24H0z"/><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM8 11v5M8 8v.01M12 16v-5"/><path d="M16 16v-3a2 2 0 0 0-4 0"/></svg></a> <a href="https://github.com/orgs/ITN-Mines-Paris" aria-label="Github"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="text-black w-6 h-6" viewBox="0 0 24 24" astro-icon="brand-github"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a> </div> </div> </header>  </div> <div class="max-w-screen-xl mx-auto px-5">  <div class="mx-auto max-w-3xl mt-14"> <span class="text-blue-400 uppercase tracking-wider text-sm font-medium"> Formation </span> <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight"> Séminaire Santé Numérique - Transformation numérique et enjeux hospitaliers </h1> <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap"> <span class="text-gray-400"> ITN </span> <span class="text-gray-400">•</span> <time class="text-gray-400" datetime="2025-01-08T12:02:00.000Z"> Mer. 8 janv. 2025 </time> <span class="text-gray-400 hidden md:block">•</span> <div class="w-full md:w-auto flex flex-wrap gap-3"> <span class="text-sm text-gray-500">#recherche</span><span class="text-sm text-gray-500">#séminaire</span> </div> </div> </div> <div class="mx-auto prose prose-lg mt-6 max-w-3xl"> <div class="my-8 p-4 bg-gray-100 rounded-lg"> <h3 class="text-xl font-bold mb-4 uppercase">Série Séminaire Santé Numérique</h3> <p class="text-sm text-gray-500">Cette série de quatre articles constitue un compte-rendu du séminaire Santé Numérique organisé par l&#39;ITN.</p> <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> <div class="p-3 bg-white rounded shadow-sm border-l-4 border-gray-300 hover:border-blue-500 transition-colors"> <a href="/actualites/semsante-1-introduction" class="block"> <span class="text-gray-500 font-bold">1.</span> Introduction </a> </div><div class="p-3 bg-white rounded shadow-sm border-l-4 border-gray-300 hover:border-blue-500 transition-colors"> <a href="/actualites/semsante-2-jumeau-numerique" class="block"> <span class="text-gray-500 font-bold">2.</span> Le jumeau numérique pour la santé </a> </div><div class="p-3 bg-white rounded shadow-sm border-l-4 border-blue-500">  <span class="text-blue-500 font-bold">3.</span> Transformation numérique et enjeux hospitaliers </div><div class="p-3 bg-white rounded shadow-sm border-l-4 border-gray-300 hover:border-blue-500 transition-colors"> <a href="/actualites/semsante-4-numerique-et-ia" class="block"> <span class="text-gray-500 font-bold">4.</span> Le numérique et l’IA pour la santé à toutes les échelles </a> </div> </div> </div>
+<h2 id="comment-une-start-up-transforme-lhôpital-avec-le-digital">Comment une start-up transforme l’hôpital avec le digital</h2>
+<p class="italic text-gray-500">La transformation numérique des hôpitaux représente l&#39;une des problématiques majeures du secteur de la santé. Lifen, une start-up fondée en 2015 par Franck Le Ouay, a relevé ce défi complexe en simplifiant l’accès, la structuration et le partage des données médicales. Depuis sa création en 2015, Lifen s&#39;est imposée comme un acteur de premier plan dans le domaine de la e-santé en France, notamment en améliorant la communication entre les professionnels de santé et avec les patients.</p>
+<p><em>Dans un secteur hospitalier où les obstacles à la numérisation sont nombreux,
+Franck Le Ouay partage sa vision de la transition numérique et les enseignements
+tirés de son parcours. Ses conseils s’adressent aux entrepreneurs du secteur,
+mais aussi aux décideurs publics et privés, en quête de stratégies adaptées à la
+transformation numérique des hôpitaux.</em></p>
+<h3 id="limportance-de-la-transformation-numérique-dans-les-hôpitaux">L’importance de la transformation numérique dans les hôpitaux</h3>
+<p>La transition numérique dans les hôpitaux présente des opportunités sans
+précédent pour améliorer l’efficience et la qualité des soins. Lifen s’attaque à
+un défi majeur pour le secteur : la structuration et le partage des données
+médicales. En permettant un meilleur accès aux informations cliniques, la
+plateforme de Lifen facilite la communication entre les professionnels de santé
+et avec les patients, améliorant ainsi leur prise en charge des patients. Cette
+innovation se place au cœur des enjeux numériques de santé, permettant
+d’optimiser les pratiques cliniques et d’assurer une gestion plus fluide des
+parcours de soins.</p>
+<h3 id="les-défis-spécifiques-de-lentrepreneuriat-en-santé">Les défis spécifiques de l’entrepreneuriat en santé</h3>
+<p>Si les start-ups peuvent avoir un rôle clé dans cette transformation,
+l’entrepreneuriat dans la santé n’est pas sans obstacles. Comme l’explique
+Franck Le Ouay, le secteur hospitalier souffre de plusieurs spécificités qui
+rendent difficile l’introduction de solutions numériques, notamment :</p>
+<ul>
+<li>Un faible taux de digitalisation : l’hôpital reste un secteur relativement peu
+digitalisé, avec une résistance au changement qui freine l’adoption des
+nouvelles technologies.</li>
+<li>Des contraintes financières et humaines : le manque de ressources, qu’elles
+soient humaines ou financières, complique la mise en œuvre de projets
+numériques, d’autant plus que les établissements hospitaliers sont souvent
+confrontés à des budgets limités.</li>
+<li>Une régulation stricte : bien que nécessaire pour garantir la sécurité des
+patients et des données, la réglementation peut freiner l’innovation,
+notamment avec des délais longs pour valider et intégrer les technologies.</li>
+<li>Un modèle économique complexe : les financements publics et privés sont
+souvent cloisonnés, et la différenciation entre les acteurs de la santé rend
+difficile la mise en place de solutions globales à l’échelle nationale.</li>
+<li>Un fonctionnement multi-local : chaque hôpital, voire chaque service,
+fonctionne selon des spécificités locales, ce qui rend l’adoption de solutions
+numériques uniformes particulièrement complexe.</li>
+<li>Une dette technique importante : le secteur hospitalier a accumulé une dette
+technique considérable, en raison de précédents échecs de numérisation qui ont
+laissé des systèmes obsolètes et difficiles à moderniser.</li>
+</ul>
+<p>Ces défis, couplés à des coûts d’entrée élevés, rendent la tâche difficile pour
+les start-ups qui souhaitent investir ce secteur. Cependant, ces obstacles ne
+sont pas insurmontables et des stratégies spécifiques peuvent aider à surmonter
+ces défis.</p>
+<h3 id="conseils-pour-entreprendre-dans-le-secteur-hospitalier">Conseils pour entreprendre dans le secteur hospitalier</h3>
+<p>En partageant son expérience, Franck Le Ouay donne plusieurs conseils pour les
+entrepreneurs souhaitant se lancer dans la santé numérique :</p>
+<ul>
+<li>Se concentrer sur l’essentiel : ll est primordial de définir des objectifs
+clairs et de ne pas se disperser dans des solutions trop complexes. Un produit
+simple mais efficace peut avoir plus d’impact qu’une solution trop ambitieuse.</li>
+<li>Être disruptif : l’innovation dans le secteur hospitalier ne doit pas se
+limiter à des améliorations marginales. Pour réussir, il faut proposer des
+solutions radicalement nouvelles qui bouleversent les pratiques existantes.</li>
+<li>Penser à l’usage : la clé du succès réside dans la conception de solutions
+simples et ergonomiques, qui répondent aux besoins quotidiens des
+professionnels de santé. L’objectif est que les outils numériques soient
+adoptés naturellement et intégrés dans le workflow des hôpitaux.</li>
+<li>Démarrer avec des petits clients : plutôt que de viser immédiatement les
+grands établissements, il est plus stratégique de commencer par des structures
+plus petites, où les processus d’adoption sont plus rapides et moins
+complexes.</li>
+<li>Aller sur le terrain : l’interaction directe avec les utilisateurs finaux est
+essentielle pour comprendre leurs besoins et ajuster les solutions en
+conséquence.</li>
+<li>Capitaliser sur le bouche-à-oreille : une fois qu’une solution est adoptée et
+qu’elle fonctionne, le bouche-à-oreille devient un puissant levier de
+croissance, notamment dans un secteur comme celui de la santé, où la confiance
+est primordiale.</li>
+<li>Faire preuve de résilience et de persévérance : l’entrepreneuriat dans le
+secteur hospitalier est un marathon, pas un sprint. Les obstacles sont
+nombreux, et la persévérance est essentielle pour surmonter les défis.</li>
+</ul>
+<h2 id="le-numérique-à-lap-hp--une-transformation-radicale-de-lécosystème-hospitalier">Le numérique à l’AP-HP : une transformation radicale de l’écosystème hospitalier</h2>
+<p class="italic text-gray-500">Dans un contexte de forte pression sur le système de santé, la transformation numérique des hôpitaux est devenue un impératif pour améliorer la qualité des soins et l’efficience des services hospitaliers. Dans ce contexte, Raphaël Baufret (Directeur des services numériques de l’Assistance Publique – Hôpitaux de Paris (AP-HP) met en place un vaste programme de numérisation, qui touche l’ensemble de ses 38 établissements.</p>
+<p>_Loin d’être une simple modernisation technologique, cette transformation vise à
+repenser les processus hospitaliers, à intégrer des outils numériques au cœur de
+la gestion des parcours de soins, et à faire face aux enjeux de sécurité des
+données tout en répondant aux défis financiers et humains. À travers des projets
+ambitieux, tels que la gestion centralisée des données de santé, la télémédecine
+et l’intégration de l’intelligence artificielle, l’AP-HP s’impose comme un
+acteur clé de la révolution numérique dans le secteur hospitalier.  _</p>
+<h3 id="la-transformation-numérique-au-cœur-de-lap-hp">La transformation numérique au cœur de l’AP-HP</h3>
+<p>L’AP-HP, l’un des plus grands groupes hospitaliers d’Europe, se distingue par
+son engagement à mettre en œuvre une transformation numérique ambitieuse à
+l’échelle de ses 38 hôpitaux. Ce programme vise à moderniser l’ensemble des
+processus internes et des services de santé, tout en garantissant une prise en
+charge plus rapide et plus personnalisée des patients.</p>
+<p>Le projet numérique de l’AP-HP repose sur plusieurs axes stratégiques, parmi
+lesquels la gestion des données de santé, l’amélioration des outils de
+collaboration entre les équipes soignantes, et l’intégration de nouvelles
+technologies pour optimiser les parcours de soin. En intégrant des solutions
+numériques avancées telles que l’intelligence artificielle (IA), la télémédecine
+et la gestion intelligente des flux hospitaliers, l’AP-HP se positionne comme un
+acteur phare dans la révolution numérique du secteur de la santé.</p>
+<h3 id="intégration-des-données-de-santé-télémédecine-et-ia-pour-optimiser-les-soins-et-les-processus-hospitaliers">Intégration des données de santé, télémédecine et IA pour optimiser les soins et les processus hospitaliers</h3>
+<p>Un des défis majeurs du programme numérique de l’AP-HP réside dans la gestion et
+l’intégration des données de santé. L’AP-HP a mis en place un système de gestion
+en temps réel des données des patients, permettant une meilleure coordination
+entre les 38 établissements du groupe. Grâce à une plateforme numérique
+centralisée, les professionnels de santé ont un accès instantané aux dossiers
+médicaux, facilitant ainsi la prise de décision clinique et réduisant les
+risques d’erreurs médicales. Cette gestion centralisée est couplée avec des
+technologies avancées d’intelligence artificielle (IA) pour analyser et traiter
+de grandes quantités de données. L’IA permet d’optimiser les diagnostics et de
+personnaliser les parcours de soins, en tenant compte des spécificités médicales
+et génétiques de chaque patient, contribuant ainsi à une médecine plus ciblée et
+plus efficace.</p>
+<p>Dans le cadre de cette transformation numérique, la télémédecine est également
+un axe stratégique. Ce projet répond à la nécessité d’améliorer l’accès aux
+soins tout en désengorgeant les services hospitaliers. L’AP-HP a déployé des
+solutions de suivi à distance pour les patients chroniques ou en
+post-opératoire, réduisant ainsi le besoin de déplacements physiques et
+d’hospitalisations prolongées. Grâce à la télémédecine, le suivi des patients en
+temps réel devient possible, notamment grâce à des outils de monitoring intégrés
+et à des consultations virtuelles, ce qui améliore la réactivité et l’efficacité
+du système de santé.</p>
+<p>L’introduction de l’intelligence artificielle joue également un rôle central
+dans la transformation numérique de l’AP-HP, en particulier pour l’aide à la
+décision. Des algorithmes d’IA analysent les données massives provenant des
+dossiers médicaux, des tests et des imageries afin d’assister les médecins dans
+leur prise de décision. Par exemple, des solutions basées sur l’apprentissage
+automatique permettent de détecter des signes précoces de maladies graves,
+telles que le cancer, facilitant ainsi un traitement plus précoce et ciblé.</p>
+<p>Enfin, l’AP-HP s’attache à améliorer l’efficience de ses processus internes à
+travers le numérique. Cela inclut des outils permettant de mieux gérer les
+stocks de médicaments, la planification des interventions chirurgicales et la
+gestion des lits. Ces innovations contribuent à une réduction des coûts, à une
+gestion plus fluide des ressources et à une prise en charge plus rapide et
+efficace des patients, garantissant ainsi une meilleure qualité des soins tout
+en optimisant l’organisation interne de l’hôpital.</p>
+<h3 id="les-principaux-défis-de-la-transformation-numérique-à-lap-hp--résistance-au-changement-sécurité-des-données-et-interopérabilité-des-systèmes">Les principaux défis de la transformation numérique à l’AP-HP : résistance au changement, sécurité des données et interopérabilité des systèmes</h3>
+<p>Si l’AP-HP a d’ores et déjà réalisé de nombreux progrès dans la mise en place de
+ses projets numériques, la transition numérique rencontre également plusieurs
+défis majeurs qui nécessitent une gestion attentive et une vision à long terme.
+Dans un environnement hospitalier où les pratiques sont souvent profondément
+ancrées, l’adoption de nouvelles technologies peut se heurter à des résistances
+internes. Les équipes soignantes, bien que désireuses de faire progresser les
+soins, peuvent se montrer réticentes face à des changements qui modifient leurs
+habitudes de travail quotidiennes. L’intégration réussie des solutions
+numériques passe donc par une formation continue des professionnels de santé et
+une communication claire sur les bénéfices attendus des nouvelles technologies.
+Cette approche est essentielle pour garantir une transition harmonieuse et
+renforcer l’adhésion des acteurs clés du système hospitalier.</p>
+<p>Dans le secteur de la santé, où les données médicales sont particulièrement
+sensibles, la sécurité des informations représente un enjeu crucial. L’AP-HP se
+doit de respecter des normes strictes concernant la protection des données
+personnelles des patients et la sécurité informatique. Cela implique des
+investissements constants dans des infrastructures technologiques adaptées,
+ainsi que dans la mise en place de protocoles de sécurité rigoureux pour
+prévenir tout risque de violation de données. La conformité avec les
+réglementations européennes (notamment le RGPD) et nationales constitue une
+priorité, afin de garantir la confidentialité des informations et la confiance
+des patients.</p>
+<p>L’un des obstacles majeurs à la numérisation à grande échelle dans les hôpitaux
+réside dans l’interopérabilité des systèmes d’information. Chaque établissement,
+y compris au sein de l’AP-HP, utilise des logiciels et des plateformes
+informatiques différents, souvent non compatibles entre eux. Cette diversité
+complique la mise en place de solutions interconnectées et globales. L’AP-HP
+s’efforce de surmonter cet obstacle en développant des solutions numériques
+capables de dialoguer de manière fluide et sécurisée entre elles, tout en
+veillant à garantir la confidentialité et la protection des données médicales.
+L’enjeu de l’interopérabilité demeure central pour permettre une gestion
+cohérente et efficace des soins au sein de l’ensemble du groupe hospitalier.</p>
+<h2 id="numérique-en-santé-et-organisation--un-enjeu-clé-pour-la-transformation-des-hôpitaux">Numérique en santé et organisation : un enjeu clé pour la transformation des hôpitaux</h2>
+<p class="italic text-gray-500">La transformation numérique dans les hôpitaux dépasse la simple innovation technique et nécessite une réorganisation profonde des structures et des pratiques. Frédéric Kletz, enseignant-chercheur au Centre de Gestion Scientifique (CGS), étudie la dynamique de transformation des entreprises, l’organisation des hôpitaux et du système de santé, ainsi que la modernisation du management public. Il est responsable de plusieurs formations liant gestion et monde de la santé au sein de l’École, mais également en partenariat avec d’autres établissements comme l’APHP, le Groupe Hospitalier Paris St-Joseph et l’École des Hautes Études en Santé Publique (EHESP).</p>
+<p><em>À travers des projets concrets et les nombreuses interactions entre les acteurs
+du domaine, Frédéric Kletz met en lumière les défis et opportunités liés à cette
+transition, soulignant son impact sur l’organisation des hôpitaux, la gestion
+des systèmes de santé et la modernisation des pratiques managériales.</em></p>
+<h3 id="le-numérique-en-santé--une-réalité-transformante">Le numérique en santé : une réalité transformante</h3>
+<p>Le secteur de la santé connaît une transformation majeure, grâce à l’adoption
+généralisée des outils numériques. De l’imagerie médicale à la gestion des
+parcours de soins en passant par la médecine prédictive, le numérique est
+omniprésent, offrant de nouvelles perspectives pour améliorer la qualité des
+soins. À travers ses recherches, le CGS a mis en évidence la manière dont ces
+technologies transforment les pratiques hospitalières, en facilitant le suivi à
+domicile (télésurveillance), la coordination entre la ville et l’hôpital, ainsi
+que l’usage des outils d’IA dans des domaines comme l’anatomopathologie, une
+spécialité médicale consistant à examiner les tissus ou les cellules, pour
+repérer et analyser des anomalies liées à une maladie.</p>
+<p>Ces avancées, souvent regroupées sous le terme de « médecine 4P » (prédictive,
+préventive, personnalisée, participative), permettent non seulement de soigner
+de manière plus ciblée, mais également d’impliquer davantage les patients dans
+leur parcours de santé. À titre d’exemple, des projets comme Covidom, une
+application e-santé permettant aux patients porteurs ou suspectés porteurs du
+Covid-19 sans signe de gravité, de bénéficier d’un télésuivi à domicile, sont
+des illustrations de l’apport des solutions numériques, permettant d’inscrire
+dans la durée le suivi des patients à domicile, tout en désengorgeant les
+structures hospitalières.</p>
+<p>Cependant, la mise en place de ces innovations n’est pas sans difficultés.
+Environ 60 à 80 % des projets numériques échouent lors de la phase de
+déploiement (source : <a href="https://www.fondsfhf.org/">fonds FHF Recherche et
+Innovations</a>). Or, les travaux menés aux Mines
+montrent que les échecs peuvent souvent s’expliquer par une insuffisante prise
+en compte des contraintes organisationnelles des établissements de santé.</p>
+<h3 id="les-projets-structurants-portés-par-le-cgs">Les projets structurants portés par le CGS</h3>
+<p>Le CGS est impliqué dans plusieurs projets de recherche et d’accompagnement,
+illustrant la diversité des enjeux organisationnels liés à l’introduction du
+numérique en santé :</p>
+<ol>
+<li><strong>L’implémentation de l’IA en santé</strong> : le CGS travaille sur l’intégration de
+l’IA en anatomopathologie. Si les algorithmes peuvent aider à améliorer la
+précision des diagnostics, ils imposent également une réorganisation des
+équipes, des processus et des circuits décisionnels. L’enjeu n’est pas
+seulement technologique, mais aussi humain et organisationnel.</li>
+<li><strong>Le dossier patient informatisé (DPI)</strong> : l’étude de l’impact du DPI sur les
+organisations hospitalières montre que les enjeux vont bien au-delà de la
+simple numérisation des dossiers. Il remet en question les routines et
+demande aux acteurs de santé d’adopter de nouvelles méthodes de travail.</li>
+<li><strong>La gestion des parcours de patients</strong> : des initiatives comme la mise en
+place de plateformes de coordination ville-hôpital en Île-de-France visent à
+mieux organiser la prise en charge des patients, en particulier ceux
+souffrant de maladies chroniques. Ces plateformes facilitent la communication
+entre les différents acteurs du cercle de soins, mais nécessitent un
+accompagnement organisationnel conséquent pour être efficaces. Il ne suffit
+pas de déployer une technologie : il faut également réviser les structures de
+coordination et les critères de performance.</li>
+<li><strong>L’organisation de tiers-lieux hospitaliers</strong> : un autre exemple de
+réorganisation numérique est la création de tiers-lieux à l’hôpital, des
+espaces dédiés à la collaboration avec des start-ups. Ces environnements
+encouragent l’innovation mais nécessitent de reconfigurer les relations entre
+l’hôpital et ses partenaires externes. Là encore, la transformation numérique
+devient un levier de changement organisationnel.</li>
+</ol>
+<p>Ces exemples montrent que l’implantation du numérique dans la santé va bien
+au-delà de la simple adoption de nouvelles technologies. Elle exige une
+réévaluation complète des modes de fonctionnement des organisations.</p>
+<h3 id="les-limites-de-la-transformation-numérique">Les limites de la transformation numérique</h3>
+<p>Si les promesses du numérique en santé sont grandes, elles s’accompagnent aussi
+de plusieurs limites :</p>
+<ul>
+<li><strong>Les professionnels de santé</strong> : beaucoup de praticiens n’ont pas le temps de
+se former aux nouveaux outils numériques, ce qui limite leur adoption
+efficace. Les outils numériques doivent être conçus en tenant compte de leurs
+contraintes, sous peine de générer un rejet ou une sous-utilisation.</li>
+<li><strong>Les patients</strong> : une partie significative de la population reste exclue du
+numérique, comme l’a démontré l’initiative Emmaüs Connect. L’accès aux
+démarches administratives numériques, comme celles liées à la santé, est
+encore hors de portée pour de nombreuses personnes. De plus, les patients ne
+sont souvent pas impliqués dans la conception des technologies qui leur sont
+destinées, ce qui conduit à des écarts entre les outils proposés et leurs
+usages réels.</li>
+<li><strong>Les acteurs industriels</strong> : souvent éloignés du terrain, certains
+industriels développent des solutions trop centrées sur la technologie, au
+détriment des besoins des usagers. Le CGS insiste sur l’importance de
+réintégrer les enjeux organisationnels au centre de ces innovations, notamment
+à travers des démarches de co-conception, impliquant toutes les parties
+prenantes.</li>
+</ul>
+<h3 id="lorganisation-un-aspect-souvent-négligé">L’organisation, un aspect souvent négligé</h3>
+<p>Un point central est l’importance de l’organisation dans l’implémentation des
+technologies numériques en santé. Chaque nouveau dispositif numérique impose une
+redéfinition des rôles, des processus, et des circuits administratifs. Il est
+nécessaire de repenser les structures organisationnelles avant même l’adoption
+d’un outil numérique. Cette dimension est souvent oubliée, menant à des échecs
+lors de la phase de déploiement.</p>
+<p>L’organisation hospitalière, tout comme l’écosystème ville-hôpital, doit être
+prête à absorber les nouvelles technologies. Cela implique :</p>
+<ul>
+<li>Une révision des compétences : les acteurs de santé doivent être formés à
+l’utilisation des nouveaux outils. De nouveaux métiers peuvent également être
+créés pour répondre à ces besoins émergents.</li>
+<li>Une réorganisation des modes de coordination : le numérique bouleverse les
+circuits traditionnels de coordination. Il est crucial de s’assurer que les
+structures hospitalières et les acteurs de santé en ville puissent travailler
+de manière coordonnée, notamment à travers des plateformes de partage
+d’informations.</li>
+<li>Un changement de modèle évaluatif : les critères de performance des hôpitaux
+doivent évoluer pour tenir compte de ces nouvelles réalités numériques.</li>
+</ul>
+<h3 id="le-numérique-comme-stimulus-de-la-transformation-organisationnelle">Le numérique comme stimulus de la transformation organisationnelle</h3>
+<p>L’adoption du numérique dans le secteur de la santé est un véritable processus
+de transformation organisationnelle et non un simple changement technologique.
+Le CGS, à travers ses recherches et ses projets d’accompagnement, montre que
+cette transformation doit être pensée et anticipée sur le long terme. Pour les
+décideurs, il est essentiel de promouvoir une démarche systématique
+d’accompagnement organisationnel lors de l’implémentation de nouvelles
+technologies. Le numérique peut être un levier puissant de changement, mais il
+ne produira ses effets que si les organisations sont prêtes à s’adapter en
+profondeur.</p> </div> <div class="text-center mt-8"> <a href="/actualites" class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition">← Retour aux actualités</a> </div>   </div> <footer class="my-20"> <p class="text-center text-sm text-slate-500">
+Copyright © 2025 ITN Mines Paris – PSL
+</p> <p class="text-center text-xs text-slate-500 mt-1">
+Design par <a href="https://github.com/boisgera">Sébastien Boisgérault</a>.
+<span class="relative"> <span class="inline-block relative -top-px"><a href="/mentions" aria-label="Mentions"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block text-slate-500 w-3.5 h-3.5" viewBox="0 0 24 24" astro-icon="brand-open-source"><path stroke="none" d="M0 0h24v24H0z"/><path d="M12 3a9 9 0 0 1 3.618 17.243l-2.193-5.602a3 3 0 1 0-2.849 0l-2.193 5.603A9 9 0 0 1 12 3z"/></svg></a> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline text-slate-500 w-3.5 h-3.5" viewBox="0 0 24 24" astro-icon="cookie-off"><path stroke="none" d="M0 0h24v24H0z"/><path d="M8 13v.01M12 17v.01M12 12v.01M18.192 18.187a3 3 0 0 1-.976.652c-1.048.263-1.787.483-2.216.661-.475.197-1.092.538-1.852 1.024a3 3 0 0 1-2.296 0C10.05 20.021 9.433 19.68 9 19.5c-.471-.195-1.21-.415-2.216-.66a3 3 0 0 1-1.623-1.624c-.265-1.052-.485-1.79-.661-2.216-.198-.479-.54-1.096-1.024-1.852a3 3 0 0 1 0-2.296c.48-.744.82-1.361 1.024-1.852.171-.413.391-1.152.66-2.216a3 3 0 0 1 .649-.971M8.63 4.639c.14-.049.263-.095.37-.139.458-.19 1.075-.531 1.852-1.024a3 3 0 0 1 2.296 0l2.667 1.104a4 4 0 0 0 4.656 6.14l.053.132a3 3 0 0 1 0 2.296c-.497.786-.838 1.404-1.024 1.852a6.579 6.579 0 0 0-.135.36M3 3l18 18"/></svg> </span> </span> </p> </footer>  </body> </html>
